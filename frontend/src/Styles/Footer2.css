@@ -6,14 +6,16 @@
     border-bottom: none;
     display: flex;
     justify-content: center;
+    /* border: 1px solid red; */
     align-items: center;
   }
   .foot11{
      display: flex;
      /* justify-content: center; */
      align-items: center;
-   
-     height: 10%;
+    /* border: 1px solid red; */
+  
+     /* height: 10%; */
      width: 94%;
      /* margin-left: 3%; */
   
@@ -62,7 +64,7 @@
          .foot12{
           width: 80%;
           display:grid;
-          margin-top: 12vw;
+          margin-top: 8vw;
           grid-template-columns: auto auto;
           row-gap: 30%;
           
@@ -80,7 +82,8 @@
           width: 100%;
          display: flex;
          justify-content:start;
-         margin-top:15%;
+         margin-top:11%;
+
           /* border: 1px solid rgb(0, 255, 55); */
         }
         .foot13a{
@@ -89,7 +92,7 @@
           line-height: 14px;
           font-weight: 400;
           font-family:axi400;
-          padding-bottom: 20%;
+          padding-bottom: 7.5%;
 
         }
         @media(max-width:350px){
