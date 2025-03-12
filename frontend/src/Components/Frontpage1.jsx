@@ -130,7 +130,8 @@ const Frontpage1 = () => {
 
                <div className='mf21'>
                   <div className='mf22'><Navbar1 /></div>
-                  <div className='mf23'>Tellus netus odio vitae <br></br> viverra phasellus tincidunt.</div>
+                  <div className='mf23'>Welcome to <br></br> 
+                  Hidden Valley Stays </div>
                </div>
 
             </div>
@@ -140,11 +141,11 @@ const Frontpage1 = () => {
             <div className='fr5'>
 
 <div className='ufygu'>
-   <p className='iuyrtf87iyug'>In lacus at lectus non neque pellentesque.</p>
+   <p className='iuyrtf87iyug'>Book your stay with us</p>
    <select>
-      <option>ALL stays
+      {/* <option>ALL STAYS
          
-      </option>
+      </option> */}
       <option>SUNSET COTTAGE</option>
       <option>SUNSET VALLEY VILLA</option>
       <option>RIVERSIDE</option>
