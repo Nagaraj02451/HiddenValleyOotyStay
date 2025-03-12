@@ -97,7 +97,7 @@ justify-content: center;
 }
 #uy6trf7856{
     font-size:1vw;
-    font-weight: 600;
+    font-weight: 500;
     font-family: axi400;
 }
 .ufygu p{
@@ -143,6 +143,7 @@ text-align: center;
 }
 .iuy7tf7i{
     display: flex;
+    align-items: center;
     column-gap: 1vw;
 }
 .uytedr756fg{
@@ -212,7 +213,8 @@ text-align: center;
         display: block;
 
         width: 100%;
-        height: 100%;
+        /* border: 1px solid red; */
+        /* height: 80%; */
     }
     .mf2{
         height: 280px;
@@ -250,9 +252,10 @@ text-align: center;
     }
     .mf4{
         width: 96%;
-        height: 20vh;
+        /* border: 1px solid red; */
+        /* height: 20vh; */
         margin-left: 2%;
-        margin-top: 10%;
+        /* margin-top: 10%; */
 
     }
     .iuyrtf87iyug{
@@ -279,7 +282,7 @@ text-align: center;
         /* margin-top: 15px; */
     }
     #uy6trf7856{
-        font-size: 13.1px;
+        font-size: 13.14px;
         /* align-items: center; */
     }
     .uy6trf7856{
