@@ -68,6 +68,7 @@ input:focus{
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 2vw;
+  /* border: 1px solid red; */
 }
 .uytr8767{
   /* padding-top: 2vw; */
@@ -115,5 +116,11 @@ input:focus{
   }
   .innerproductiteam{
     padding-bottom: 15vh;
+  }
+  .iuyf7iyug{
+    padding-bottom: 9vh;
+    margin-bottom: 1vh;
+    row-gap: 4.5vh;
+    border-bottom: 1px solid #141414;
   }
 }
