@@ -105,6 +105,8 @@
 .bpro5i{
     display: flex;
     justify-content: space-between;
+    /* visibility: hidden; */
+    /* border: 1px solid red; */
 }
 .bpro5i button{
    background-color: #B0714E;
