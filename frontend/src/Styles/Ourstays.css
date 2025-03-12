@@ -1,5 +1,9 @@
 .os1{
     margin: 0;
+    /* height: inherit; */
+    /* border: 1px solid red; */
+    /* padding: 0; */
+    /* height: 100vh; */
 }
 
 
@@ -27,6 +31,10 @@
     background-position: center;
     background-repeat:repeat;
     background-size: cover;
+}
+.os64{
+    /* border: 1px solid red; */
+    padding-top: 6vh;
 }
 .osbN{
     height: 100vh;
@@ -267,6 +275,7 @@
 .os42{
     text-align: center;
     font-size: 24px;
+    /* padding-bottom: 5vw; */
     line-height: 20px;
     font-family: blk300;
     font-weight: 600;
@@ -323,6 +332,8 @@
 }
 .os63R{
     display: inline;
+    /* border: 1px solid red; */
+    /* columns: 10vh; */
 /* height: 362px; */
 
 }
@@ -338,9 +349,9 @@
     height: 365px;
 }
 .ourfoot{
-    margin-top: 30%;
+    /* margin-top: 30%; */
     width: 100%;
-    padding: 5% 3%;
+    padding: 0 3%;
     border-top: 1px solid #1E1E1E;
 }
 
