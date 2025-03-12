@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Styles/Navbar2.css'
+import Sidebar from './Sidebar/Sidebar';
 
 const Navbar2 = () => {
+    const [isopen, setisopen] = useState(false);
+    const toggle = () => {
+      setisopen(!isopen);
+    };
   return (
     <>
+<Sidebar isopen={isopen} toggle={toggle} />
+
     <div className='nav11'>
         <div className='nav2edit'>
          <a href='site' className='nav11a'>OUR STAYS</a>
          <a href='contact' className='nav11a'>CONTACT US</a>
-         <a className='nav12a' href='/sidebar'>
-            <img src='Img/nav2.svg'></img>
-         </a>
+         <img className='u7y86tg76y' onClick={toggle} src='Img/nav2.svg'></img>
+
         </div>
 
         <div className='nav13'>
