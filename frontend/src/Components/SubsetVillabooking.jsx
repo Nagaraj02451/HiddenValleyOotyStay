@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import'../Styles/Bprocess.css'
 import Navbar1 from './Navbar1'
 import Footer2 from './Footer2'
 
 const SubsetVillabooking = () => {
+      const searchdfghn = useRef();
+  
    const [room, setroom] = useState(0);
    const [tax, settax] = useState(0);
    const [total, settotal] = useState(0);
 //    const [room1, setroom1] = useState(6000);
     const firstroom =()=>{
+      searchdfghn.current.classList.add("jhuyiuytg67y")
+
         setroom(5000)
         settax(1000)
         settotal(6000)
@@ -154,7 +158,7 @@ const SubsetVillabooking = () => {
                     </div>
 
                          
-                    <a href='booking'><div className='book9'>
+                    <a href='booking'><div className='book9' ref={searchdfghn}>
                         <button className='book91'>Book Now</button>
                    </div></a>
                      
@@ -167,7 +171,7 @@ const SubsetVillabooking = () => {
     </div>
 
 
-    <div className='ourfoot1'>
+    <div className='ersaygtrhw'>
 
 <Footer2/>
 
