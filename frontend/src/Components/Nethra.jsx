@@ -93,7 +93,7 @@ const Nethra = () => {
       <img id='jhgfuyt' src='Img/Nethra7.webp'  alt="..." />
     </div>
     <div class="carousel-item">
-      <img id='jhgfuyt' src='Img/Nethra1.webp'  alt="..." />
+      <img id='jhgfuyt' src='Img/Nethra2121.webp'  alt="..." />
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
