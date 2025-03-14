@@ -126,10 +126,16 @@
     line-height:2vw;
     font-weight: 400;
 }
+.hjcgg{
+    font-family: axi500;
+
+}
 .cnt41b{
     letter-spacing: 1%;
     font-family: axi400;
     font-size: 1vw;
+    padding-top: 15px;
+    padding-bottom: 15px;
     line-height:1vw;
     font-weight: 400;
     margin-top: 1vw;
