@@ -146,6 +146,11 @@ text-align: center;
     align-items: center;
     column-gap: 1vw;
 }
+
+  .ytrdyfguh input:focus{
+    outline: none;
+    
+  }
 .uytedr756fg{
     background-color: #485647;
     height: 3.5vw;
@@ -195,6 +200,7 @@ text-align: center;
     height: 1.6vw;
     color: white;
     font-size: 1vw;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
