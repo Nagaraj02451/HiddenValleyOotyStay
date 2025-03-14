@@ -8,10 +8,18 @@
   font-family:axi400;
   src:url( ".../../../public/Fonts/Axiforma/Axiforma/Axiforma-Light.woff");
 }
+@font-face{
+  font-family:axi500;
+  src:url( ".../../../public/Fonts/Axiforma/Axiforma/Axiforma-Regular.woff");
+}
 
 @font-face{
   font-family:blk300;
   src:url( ".../../../public/Fonts/Blacklist/Blacklist-Light.woff");
+}
+@font-face{
+  font-family:blk400;
+  src:url( ".../../../public/Fonts/Blacklist/Blacklist-Regular.ttf");
 }
 a{
   text-decoration: none;
@@ -30,8 +38,12 @@ a{
 .ytdfuyt6fu{
   width: 29vw;
 }
+
 input:focus{
   outline: none;
+}
+.ujhgikv{
+ margin-right: 5px;
 }
 .yurft768uyg7ui{
   width: 25%;
@@ -53,11 +65,29 @@ input:focus{
   font-size: 1.04vw; 
   color: #141414;
 }
+.hgfyvutu{
+  font-family: axi400;
+  font-size: 1.04vw; 
+  color: #141414;
+  padding-top: 2vw;
+}
 .giuytgf76iuy{
   font-family: blk500;
   font-size: 1.5vw;
   color: #141414;
   padding-top: 0.5vw;
+}
+.iuyfg7tuy{
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* padding: 2vw 0; */
+  padding-top: 3vw;
+  padding-bottom: 1.5vw;
+  font-size: 3.1vw;
+  font-family: blk400;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
 }
 .yutrfi{
   text-decoration: underline;
@@ -69,6 +99,34 @@ input:focus{
   flex-wrap: wrap;
   row-gap: 2vw;
   /* border: 1px solid red; */
+}
+.iuyfgt6ty{
+  color: white;
+}
+.iuyfgt6ty:hover{
+  color: #141414;
+}
+.uytdf6truyfyt h2{
+  /* color: red; */
+  padding: 0.5vw 0;
+  font-family: axi500;
+  font-size: 1.17vw;
+  line-height: 1.17vw;
+}
+.uytdf6truyfyt li{
+  /* color: red; */
+  font-family: axi400;
+  font-size: 1.04vw;
+  /* line-height: 1.04vw; */
+}
+.uytdf6truyfyt p{
+  /* color: red; */
+  font-family: axi400;
+  font-size: 1.04vw;
+  /* line-height: 1.04vw; */
+}
+.uygfui7ug{
+  cursor: pointer;
 }
 .uytr8767{
   /* padding-top: 2vw; */
@@ -122,5 +180,23 @@ input:focus{
     margin-bottom: 1vh;
     row-gap: 4.5vh;
     border-bottom: 1px solid #141414;
+  }
+  .hgfyvutu{
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .iuyfg7tuy{
+    font-size: 32px;
+  }
+  .uytdf6truyfyt h2{
+    /* color: red; */
+   font-size: 18px;
+   padding: 20px 0;
+  }
+  .uytdf6truyfyt li{
+ font-size: 16px;
+  }
+  .uytdf6truyfyt p{
+  font-size: 16px;
   }
 }
