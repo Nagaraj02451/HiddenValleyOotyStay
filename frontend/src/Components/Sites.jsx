@@ -52,7 +52,7 @@ export default function Sites() {
                                         </div>
                                         <div className="uytf76rf7uy">
                                             <div className="yutfu67iyhi">
-                                                <div>10 stays</div>
+                                                <div>5 stays</div>
                                                 <div className="yutrfi">CLEAR FILTER</div>
                                             </div>
 
