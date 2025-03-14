@@ -9,10 +9,10 @@ const Footer1 = () => {
        
        <div className='foot2'>
           
-       <div className='foot2a'>Privacy Policy</div>
-       <div className='foot2a'>Terms and Conditions</div>
-       <div className='foot2a'>Refund Policy</div>
-       <div className='foot2a'>Sitemap</div>
+       <a href='/privacyPolicy'><div className='foot2a'>Privacy Policy</div></a>
+       <a href='/termsAndConditions'><div className='foot2a'>Terms and Conditions</div></a>
+       <a href='/refundPolicy'><div className='foot2a'>Refund Policy</div></a>
+       <a href=''><div className='foot2a'>Sitemap</div></a>
 
        </div>
        
