@@ -72,7 +72,8 @@ const Property = () => {
 
               <div className='pro3'>
                    <div className='pro31'>
-                         <div className='pro32'>Faucibus vitae molestie ac <br></br>turpis pellentesque. Viverra.</div>
+                         <div className='pro32'>List your property with us!</div>
+                         <div className='hgfyvutu'>You can fill out this form and one of our personnel will<br /> connect with you at the earliest.</div>
                          <div className='pro33'>
                          <div className='pro34' ><input value={name} onChange={(e) => setname(e.target.value)} placeholder='Name'></input></div>
                          <div className='pro34' ><input value={surname} onChange={(e) => setsurname(e.target.value)} placeholder='Surname'></input></div>
@@ -82,9 +83,16 @@ const Property = () => {
                          <div className='pro34' ><input value={typeofproperty} onChange={(e) => settypeofproperty(e.target.value)}  placeholder='What type of property is it?'></input></div>
                          <div className='pro34' ><input value={websitelink} onChange={(e) => setwebsitelink(e.target.value)} placeholder='Photo/Website link (if any)'></input></div>
 
-
                          </div>
-                         <div onClick={conttactinfo} className='cnt41e'><button>Send now</button></div>
+<div className='hgfyvutu'>This consent records my voluntary permission to allow 
+    <br />Hiddenvalley Stays to gather, record, store, use and provide
+    <br /> access to my personal information. *</div>
+
+    <div className='hgfyvutu'><input className='ujhgikv' type="checkbox" />By checking this box, I agree to receive promotional
+        <br /> texts/calls from Hiddenvalley Stays and consent to the 
+        <br />Privacy Policy.</div>
+
+                         <div onClick={conttactinfo} className='cnt41e'><button>Send Request</button></div>
 
                    </div>
 
