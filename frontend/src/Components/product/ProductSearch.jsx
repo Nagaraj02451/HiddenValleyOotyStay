@@ -47,9 +47,12 @@ export default function ProductSearch() {
                                     
                             
                                      <div className="ytrdyfguh">
-                                     <input  type="text" id={category} name={category} value={category} onClick={() => {
+                                        <div className="uygfui7ug" id={category} name={category}  onClick={() => {
                                             setCategory(category)
-                                        }} key={category}  />
+                                        }} key={category}>{category}</div>
+                                     {/* <input  type="text" id={category} name={category} value={category} onClick={() => {
+                                            setCategory(category)
+                                        }} key={category}  /> */}
                                      
                                      </div>
                                     </>
