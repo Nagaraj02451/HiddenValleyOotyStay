@@ -55,9 +55,10 @@ const Contact = () => {
                         <div className='cnt32'>CONTACT US</div>
 
                         <div className='jyfu6ty'>
-                            <div className='jhcgvkuy'><div>Call : </div> +91 2125 2151 51</div>
-                            <div className='jhcgvkuy'><div>Email : </div> enquiry@hiddenvalleystays.com</div>
-                            <div className='jhcgvkuy'><div>Address : </div> 166 Maya Islands, Fort Peggieton 19664</div>
+                           <a href="tel:+9611588968"> <div className='jhcgvkuy'><div><span className='hjcgg'>Call :</span> </div> +91 9611588968/ +91 6362757985</div></a>
+                            <a href="mailto:hello@hiddenvalleystays.com" ><div className='jhcgvkuy'>
+                                <div><span className='hjcgg'>For Enquiry :</span>  </div> hello@hiddenvalleystays.com</div></a>
+                            <div className='jhcgvkuy'><div><span className='hjcgg'>Address :</span> </div> Coorg, Karnataka</div>
                         </div>
                         </div>
 
@@ -67,9 +68,11 @@ const Contact = () => {
 
                         <div className='cnt4'>
                             <div className='cnt41'>
-                                <div className='cnt41a'>Keep in touch!</div>
-                                <div className='cnt41b'>Lorem ipsum dolor sit amet consectetur. Sagittis fermentum <br></br> porttitor turpis magna convallis. Platea maecenas.</div>
-                                <div className='cnt41bb'>Lorem ipsum dolor sit amet consectetur.<br></br> Sagittis fermentum porttitor turpis magna <br></br>convallis. Platea maecenas.</div>
+                                <div className='cnt41a'>Get in touch!</div>
+                                <div className='cnt41b'>Alternatively, you can fill out this form and we will get back
+                                    <br /> to you at the earliest.</div>
+                                <div className='cnt41bb'>Alternatively, you can fill out this form and we will get back
+                                <br /> to you at the earliest.</div>
 
                                 <div className='cnt41c' >
                                     <div className='cnt41d' ><input type='text' value={name} onChange={(e) => setname(e.target.value)} placeholder='Name'></input></div>
@@ -80,6 +83,13 @@ const Contact = () => {
 
 
                                 </div>
+                                <div className='hgfyvutu'>This consent records my voluntary permission to allow 
+    <br />Hiddenvalley Stays to gather, record, store, use and provide
+    <br /> access to my personal information. *</div>
+
+    <div className='hgfyvutu'><input className='ujhgikv' type="checkbox" />By checking this box, I agree to receive promotional
+        <br /> texts/calls from Hiddenvalley Stays and consent to the 
+        <br />Privacy Policy.</div>
                                 <div className='cnt41e' onClick={conttactinfo}><button>Send now</button></div>
                             </div>
                             <div className='cnt42'>
