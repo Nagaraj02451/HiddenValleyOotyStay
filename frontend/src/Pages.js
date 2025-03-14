@@ -1,4 +1,4 @@
-import React from 'react'
+import React , { useState }  from 'react'
 import { BrowserRouter , Routes, Route } from 'react-router-dom';
 import Navbar1 from './Components/Navbar1';
 import Frontpage1 from './Components/Frontpage1';
@@ -21,13 +21,41 @@ import RiversideBooking from './Components/RiversideBooking';
 import SunsetcottageBooking from './Components/SunsetcottageBooking';
 import SubsetVillabooking from './Components/SubsetVillabooking';
 import NethraBooking from './Components/NethraBooking';
+import Privacy from './Components/Privacy';
+import Terms from './Components/Terms';
+import Refund from './Components/Refund';
 
 
 const Pages = () => {
+  const [pizza, setPizza] = useState({ base: "" , adult : "", child : "" , dateone : "" , datetwo : "" });
+
+  console.log(pizza, "Collected base");
+
+  const addBase = (base ) => {
+    setPizza({ ...pizza, base })
+  }
+
+  const addadult = (adult) => {
+    setPizza({ ...pizza, adult })
+  }
+
+  const addchild = (child) => {
+    setPizza({ ...pizza, child })
+  }
+  const firstdate = (dateone) => {
+    setPizza({ ...pizza, dateone })
+  }
+  const seconddatedate = (datetwo) => {
+    setPizza({ ...pizza, datetwo })
+  }
+
+
   return (
     <>
     <BrowserRouter>
     <ToastContainer theme='dark' />
+
+      
     
      <Routes>
 
@@ -36,7 +64,7 @@ const Pages = () => {
        <Route path='/footer1' element={<Footer1/>}></Route>
        <Route path='/footer2' element={<Footer2/>}></Route>
 
-       <Route path='/' element={<Frontpage1/>}></Route>  
+       <Route path='/' element={<Frontpage1  addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>  
        <Route path='/hinyhouse' element={<Ourstays/>}></Route>
        <Route path='/riverside' element={<Riverside />}></Route>
        <Route path='/sunsetcottage' element={<Sunstcottage />}></Route>
@@ -45,11 +73,14 @@ const Pages = () => {
        <Route path='/contact' element={<Contact/>}></Route>
        <Route path='/property' element={<Property/>}></Route>
        <Route path='/booking' element={<Booking/>}></Route>
-       <Route path='/tinyhouseBooking' element={<Bprocess/>}></Route>
-       <Route path='/riversideBooking' element={<RiversideBooking />}></Route>
-       <Route path='/sunsetcottageBooking' element={<SunsetcottageBooking />}></Route>
-       <Route path='/sunsetVillaBooking' element={<SubsetVillabooking />}></Route>
-       <Route path='/nethraBooking' element={<NethraBooking />}></Route>
+       <Route path='/tinyhouseBooking' element={<Bprocess pizza={pizza} />}></Route>
+       <Route path='/riversideBooking' element={<RiversideBooking pizza={pizza} />}></Route>
+       <Route path='/sunsetcottageBooking' element={<SunsetcottageBooking pizza={pizza} />}></Route>
+       <Route path='/sunsetVillaBooking' element={<SubsetVillabooking pizza={pizza}  />}></Route>
+       <Route path='/nethraBooking' element={<NethraBooking pizza={pizza} />}></Route>
+       <Route path='/privacyPolicy' element={<Privacy />}></Route>
+       <Route path='/termsAndConditions' element={<Terms />}></Route>
+       <Route path='/refundPolicy' element={<Refund />}></Route>
        {/* <Route path='/sidebar' element={<Sidebar/>}></Route> */}
        <Route path='/site' element={<Sites />}></Route>
      </Routes>
