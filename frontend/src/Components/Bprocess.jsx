@@ -3,7 +3,7 @@ import'../Styles/Bprocess.css'
 import Navbar1 from './Navbar1'
 import Footer2 from './Footer2'
 
-const Bprocess = () => {
+const Bprocess = ({pizza}) => {
     const searchdfghn = useRef();
   
    const [room, setroom] = useState(0);
@@ -99,9 +99,9 @@ const Bprocess = () => {
              <div className='bpro4a'>
                     <div className='book8'>
                     <div className='book81'>Your Stay</div>
-                     <div className='book82'><div className='book83'>Date:</div><div className='book84'> Wed, Aug 9, 2023 - Thu, Aug 10, 2023</div></div>
-                     <div className='book82'><div className='book83'>Guests: </div><div className='book84'>2 Adults</div></div>
-                     <div className='book82'><div className='book83'>Stay:</div><div className='book84'> Tiny house</div></div>
+                     <div className='book82'><div className='book83'>Date:</div><div className='book84'> {pizza.dateone} - {pizza.datetwo}</div></div>
+                     <div className='book82'><div className='book83'>Guests: </div><div className='book84'>{pizza.adult} Adults - {pizza.child} Child</div></div>
+                     <div className='book82'><div className='book83'>Stay:</div><div className='book84'> {pizza.base}</div></div>
                      {/* <div className='book82'><div className='book83'>Selected Room:</div><div className='book84'>King Room with Forest View</div></div> */}
                      <div className='book82'><div className='book83'>Duration of the Stay: </div><div className='book84'> 1 Night</div></div>
                     
