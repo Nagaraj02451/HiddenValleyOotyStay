@@ -31,19 +31,10 @@ const Property = () => {
                });
                alert("Your details has been received successfully")
 
-               toast.success(
-                   `Hello ${email} your property details has been received successfully. Our team will contact you soon!!!`,
-                   {
-                       position: "bottom-top",
-                   }
-               );
+              
            } else {
-            toast.error(
-               "Please fill in all required fields!",
-               {
-                   position: "bottom-center",
-               }
-           );
+            alert("Please fill all details")
+
            }
        } catch (error) {
          if (error.response && error.response.status === 404) {
