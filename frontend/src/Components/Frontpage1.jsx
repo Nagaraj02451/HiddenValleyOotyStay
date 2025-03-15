@@ -7,8 +7,10 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link, useNavigate } from 'react-router-dom'
 
+
+
 const Frontpage1 = ({ addBase, adult , pizza , child , dateone , datetwo }) => {
-  const bases = ['SUNSET COTTAGE', 'SUNSET VALLEY VILLA', 'RIVERSIDE' , 'NETHRA' , 'TINYHOUSE'];
+  const bases = ['ALL STAYS','SUNSET COTTAGE', 'SUNSET VALLEY VILLA', 'RIVERSIDE' , 'NETHRA' , 'TINYHOUSE'];
   const [delivery, setdelivery] = useState("");
 //   console.log(delivery , "uiyigf");
 const navigate = useNavigate();
@@ -60,20 +62,23 @@ const navigate = useNavigate();
       datetwo(date1.toString().slice(0,15))
 
       if(delivery === "SUNSET COTTAGE"){
-         navigate("/sunsetcottageBooking")
+         // alert("giu")
+         navigate("/sunsetcottage")
       }else if(delivery === "SUNSET VALLEY VILLA"){
-         navigate("/sunsetVillaBooking")
+         navigate("/sunsetvilla")
       }else if(delivery === "RIVERSIDE"){
-         navigate("/riversideBooking")
+         navigate("/riverside")
       }else if(delivery === "NETHRA"){
-         navigate("/nethraBooking")
+         navigate("/nethra")
       }else if(delivery === "TINYHOUSE"){
-         navigate("/tinyhouseBooking")
+         navigate("/hinyhouse")
       }
 
      }
    return (
       <>
+
+      
          <div className='fr1'>
             <div className='fr2'>
 
