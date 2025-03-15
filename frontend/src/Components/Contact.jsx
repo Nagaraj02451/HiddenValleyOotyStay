@@ -51,7 +51,7 @@ const Contact = () => {
 
                     <div className='cnt3'>
                         <div className='newcontentsupport'>
-                        <div className='cnt31' >Semper vitae sit pretium nisl</div>
+                        {/* <div className='cnt31' >Semper vitae sit pretium nisl</div> */}
                         <div className='cnt32'>CONTACT US</div>
 
                         <div className='jyfu6ty'>
