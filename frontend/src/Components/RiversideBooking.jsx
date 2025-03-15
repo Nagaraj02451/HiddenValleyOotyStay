@@ -2,26 +2,66 @@ import React, { useRef, useState } from 'react'
 import'../Styles/Bprocess.css'
 import Navbar1 from './Navbar1'
 import Footer2 from './Footer2'
+import { useEffect } from 'react'
+import { Link ,useNavigate } from 'react-router-dom'
 
-const RiversideBooking = () => {
+const RiversideBooking = ({addBase, adult , pizza , child , dateone , datetwo  , stay , roomR , taxR , totalR}) => {
          const searchdfghn = useRef();
+         const navigate = useNavigate();
      
    const [room, setroom] = useState(0);
    const [tax, settax] = useState(0);
    const [total, settotal] = useState(0);
-//    const [room1, setroom1] = useState(6000);
+   const [room1, setroom1] = useState(6000);
     const firstroom =()=>{
      searchdfghn.current.classList.add("jhuyiuytg67y")
-
-        setroom(5000)
-        settax(1000)
-        settotal(6000)
+     setroom1("Farmhouse Family Room")
+       setroom(4800)
+       settax(600)
+       settotal(5400)
+       stay("Farmhouse Family Room")
     }
     const secondroom =()=>{
-        setroom(6000)
-        settax(1200)
-        settotal(7200)
+     searchdfghn.current.classList.add("jhuyiuytg67y")
+     setroom1("Farmhouse Dorm Room")
+       setroom(4800)
+       settax(600)
+       settotal(5400)
+       stay("Farmhouse Dorm Room")
     }
+    const thirdroom =()=>{
+     searchdfghn.current.classList.add("jhuyiuytg67y")
+     setroom1("Treehouse Hillview Room")
+       setroom(3000)
+       settax(500)
+       settotal(3500)
+       stay("Treehouse Family Room")
+    }
+    const fouthroom =()=>{
+     searchdfghn.current.classList.add("jhuyiuytg67y")
+     setroom1("Treehouse Family Room")
+       setroom(3000)
+       settax(500)
+       settotal(3500)
+       stay("Treehouse Family Room")
+    }
+      const jghftuycv = ()=>{
+              navigate('/booking',{state:{room:room,tax:tax , total:total}});
+              // console.log(room , tax , total , "iuyfygb");
+             }
+        
+               useEffect(()=>{
+              child(pizza.child)
+              addBase(pizza.addBase)
+              adult(pizza.adult)
+              datetwo(pizza.datetwo)
+              dateone(pizza.dateone)
+              stay(pizza.stay)
+             
+              console.log("kjhgju" , pizza.child);
+        
+              
+                },[])
   return (
     <>
     <div className='book1'>
@@ -102,7 +142,7 @@ const RiversideBooking = () => {
 
                                    <div className='bpro5i'>
                                     <div></div>
-                                    <button onClick={firstroom}>Select</button>
+                                    <button onClick={secondroom}>Select</button>
                                    </div>
                              
                            </div>
@@ -139,7 +179,7 @@ const RiversideBooking = () => {
 
                                    <div className='bpro5i'>
                                     <div></div>
-                                    <button onClick={firstroom}>Select</button>
+                                    <button onClick={thirdroom}>Select</button>
                                    </div>
                              
                            </div>
@@ -176,7 +216,7 @@ const RiversideBooking = () => {
 
                                    <div className='bpro5i'>
                                     <div></div>
-                                    <button onClick={firstroom}>Select</button>
+                                    <button onClick={fouthroom}>Select</button>
                                    </div>
                              
                            </div>
@@ -210,9 +250,9 @@ const RiversideBooking = () => {
              <div className='bpro4a'>
                     <div className='book8'>
                     <div className='book81'>Your Stay</div>
-                     <div className='book82'><div className='book83'>Date:</div><div className='book84'> Wed, Aug 9, 2023 - Thu, Aug 10, 2023</div></div>
-                     <div className='book82'><div className='book83'>Guests: </div><div className='book84'>2 Adults</div></div>
-                     <div className='book82'><div className='book83'>Stay:</div><div className='book84'> RiverSide</div></div>
+                    <div className='book82'><div className='book83'>Date:</div><div className='book84'> {pizza.dateone} - {pizza.datetwo}</div></div>
+                     <div className='book82'><div className='book83'>Guests: </div><div className='book84'>{pizza.adult} Adults - {pizza.child} Child</div></div>
+                     <div className='book82'><div className='book83'>Stay:</div><div className='book84'>Riverside</div></div>
                      {/* <div className='book82'><div className='book83'>Selected Room:</div><div className='book84'>King Room with Forest View</div></div> */}
                      <div className='book82'><div className='book83'>Duration of the Stay: </div><div className='book84'> 1 Night</div></div>
                     
@@ -230,9 +270,9 @@ const RiversideBooking = () => {
                     </div>
 
                          
-                    <a href='booking'><div className='book9' ref={searchdfghn}>
-                        <button className='book91'>Book Now</button>
-                   </div></a>
+                    <div className='book9' ref={searchdfghn}>
+                        <button onClick={jghftuycv} className='book91'>Book Now</button>
+                   </div>
                      
                 </div>
 
@@ -243,7 +283,7 @@ const RiversideBooking = () => {
     </div>
 
 
-    <div className='ersaygtrhw'>
+    <div >
 
 <Footer2/>
 
