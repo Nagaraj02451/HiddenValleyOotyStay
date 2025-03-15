@@ -3,7 +3,12 @@ const nodemailer = require("nodemailer");
 
 //Register User - /api/v1/register
 exports.listpropertycontroll = catchAsyncError(async (req, res, next) => {
+    const {name} = req.body
     const {email} = req.body
+    const {phone} = req.body
+    const {property} = req.body
+    const {typeofproperty} = req.body
+    const {websitelink} = req.body
  
     // console.log(email,password , "bunbuhb");
     if(email){
@@ -17,12 +22,17 @@ exports.listpropertycontroll = catchAsyncError(async (req, res, next) => {
             }
         });
         const mailOptions = {
-            from: "files.aweganyz@gmail.com",
+            from: "hello@hiddenvalleystays.com",
             to: email ,  
             subject: "list",
             html: `
             <div style="height: auto; width:100% ;backgroud-color:white; padding:30px">
-        <p style="padding:1px">  list : ${email}</p>
+        <p style="padding:1px">  Name : ${name}</p>
+        <p style="padding:1px">  Email : ${email}</p>
+        <p style="padding:1px">  Phone : ${phone}</p>
+        <p style="padding:1px">  Property : ${property}</p>
+        <p style="padding:1px">  Typeofproperty : ${typeofproperty}</p>
+        <p style="padding:1px">  websitelink : ${websitelink}</p>
        
          
          </div>
