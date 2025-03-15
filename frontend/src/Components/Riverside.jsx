@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../Styles/Ourstays.css"
 import Navbar1 from './Navbar1'
 import Navbar2 from './Navbar2'
 import Footer2 from './Footer2'
+import { Link } from 'react-router-dom'
 
 
-const Riverside = () => {
+const Riverside = ({ addBase, adult , pizza , child , dateone , datetwo }) => {
+        console.log("kjhgju" , pizza.child);
+        useEffect(()=>{
+      child(pizza.child)
+      addBase(pizza.addBase)
+      adult(pizza.adult)
+      datetwo(pizza.datetwo)
+      dateone(pizza.dateone)
+        },[])
   return (
     <>
       <div className='os1'>
@@ -34,9 +43,9 @@ const Riverside = () => {
                       <br />the untouched beauty of Coorg from
                       <br /> the comfort of your stay.</div>
 
-                     <a href='RiversideBooking'><div className='os34'>
+                     <Link to='/RiversideBooking'><div className='os34'>
                         <button>BOOK NOW</button>
-                     </div></a>
+                     </div></Link>
                      </div>
 
              </div>
