@@ -27,7 +27,7 @@ import Refund from './Components/Refund';
 
 
 const Pages = () => {
-  const [pizza, setPizza] = useState({ base: "" , adult : "", child : "" , dateone : "" , datetwo : "" });
+  const [pizza, setPizza] = useState({ base: "" , adult : "", child : "" , dateone : "" , datetwo : "" , stay :"" , roomR:"" , taxR : "", totalR :"" });
 
   console.log(pizza, "Collected base");
 
@@ -48,6 +48,18 @@ const Pages = () => {
   const seconddatedate = (datetwo) => {
     setPizza({ ...pizza, datetwo })
   }
+  const stay = (stay) => {
+    setPizza({ ...pizza, stay })
+  }
+  const roomR = (roomR) => {
+    setPizza({ ...pizza, roomR })
+  }
+  const taxR = (taxR) => {
+    setPizza({ ...pizza, taxR })
+  }
+  const totalR = (totalR) => {
+    setPizza({ ...pizza, totalR })
+  }
 
 
   return (
@@ -65,19 +77,19 @@ const Pages = () => {
        <Route path='/footer2' element={<Footer2/>}></Route>
 
        <Route path='/' element={<Frontpage1  addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>  
-       <Route path='/hinyhouse' element={<Ourstays/>}></Route>
-       <Route path='/riverside' element={<Riverside />}></Route>
-       <Route path='/sunsetcottage' element={<Sunstcottage />}></Route>
-       <Route path='/sunsetvilla' element={<Sunsetvlla />}></Route>
-       <Route path='/nethra' element={<Nethra />}></Route>
+       <Route path='/hinyhouse' element={<Ourstays roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
+       <Route path='/riverside' element={<Riverside roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
+       <Route path='/sunsetcottage' element={<Sunstcottage roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
+       <Route path='/sunsetvilla' element={<Sunsetvlla roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
+       <Route path='/nethra' element={<Nethra stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
        <Route path='/contact' element={<Contact/>}></Route>
        <Route path='/property' element={<Property/>}></Route>
-       <Route path='/booking' element={<Booking/>}></Route>
-       <Route path='/tinyhouseBooking' element={<Bprocess pizza={pizza} />}></Route>
-       <Route path='/riversideBooking' element={<RiversideBooking pizza={pizza} />}></Route>
-       <Route path='/sunsetcottageBooking' element={<SunsetcottageBooking pizza={pizza} />}></Route>
-       <Route path='/sunsetVillaBooking' element={<SubsetVillabooking pizza={pizza}  />}></Route>
-       <Route path='/nethraBooking' element={<NethraBooking pizza={pizza} />}></Route>
+       <Route path='/booking' element={<Booking pizza={pizza} />}></Route>
+       <Route path='/tinyhouseBooking' element={<Bprocess roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
+       <Route path='/riversideBooking' element={<RiversideBooking roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
+       <Route path='/sunsetcottageBooking' element={<SunsetcottageBooking  roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
+       <Route path='/sunsetVillaBooking' element={<SubsetVillabooking roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate}  />}></Route>
+       <Route path='/nethraBooking' element={<NethraBooking roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
        <Route path='/privacyPolicy' element={<Privacy />}></Route>
        <Route path='/termsAndConditions' element={<Terms />}></Route>
        <Route path='/refundPolicy' element={<Refund />}></Route>
