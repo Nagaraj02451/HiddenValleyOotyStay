@@ -1,10 +1,65 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "../Styles/Booking.css"
 import Navbar2 from './Navbar2'
 import Navbar1 from './Navbar1'
 import Footer2 from './Footer2'
+import axios from "axios"
+import {useLocation, useNavigate } from 'react-router-dom'
 
-const Booking = () => {
+const Booking = ({pizza}) => {
+             const hidden = useRef();
+    
+      const location = useLocation();
+      const[room , setroom] = useState("")
+      const[tax , settax] = useState("")
+      const[total , settotal] = useState("")
+      const[per , setper] = useState("")
+      const[email , setemail] = useState("")
+      const[phone , setphone] = useState("")
+      
+      if(per !== "" && email !== "" && phone !== ""){
+        hidden.current.classList.add("dsrhtr")
+           
+      }
+      const bookingdatas = async () => {
+        // alert("df")
+        try {
+            if (email) {
+                const result = await axios.post("/api/v1/booking", {
+                    name : per,
+                    email: email,
+                    phone : phone,
+                    room:room,
+                    tax:tax,
+                    total:total,
+                    date : pizza.dateone,
+                    date2 :pizza.datetwo,
+                    adult:pizza.adult,
+                    child:pizza.child,
+                    stay:pizza.base,
+                    selectedroom:pizza.stay,
+
+                    
+                });
+                alert("Your details has been received successfully")
+              
+            } else {
+                alert("Please fill all details")
+
+            }
+        } catch (error) {
+            console.log(error.message);
+        }
+    };
+    
+   useEffect(()=>{
+    if (location.state !== null) {
+        // alert("hjb")
+        setroom(location.state.room)
+        settax(location.state.tax)
+        settotal(location.state.total)
+      }
+   },[])
   return (
    <>
    <div className='book1'>
@@ -19,12 +74,12 @@ const Booking = () => {
                     <div  className='book41'>Guest Information</div>
 
                     <div  className='book42'>
-                        <div  className='book43'><input placeholder='Name'></input></div>
+                        <div  className='book43'><input value={per} onChange={(e) => setper(e.target.value)}  placeholder='Name'></input></div>
                         <div  className='book44'>
-                            <div  className='book43'><input placeholder='Email'></input></div>
+                            <div  className='book43'><input value={email} onChange={(e) => setemail(e.target.value)}  placeholder='Email'></input></div>
                             <div  className='book44a'>This is the email we will send your confirmation to</div>
                         </div>
-                        <div  className='book43'><input placeholder='Phone'></input></div>
+                        <div  className='book43'><input value={phone} onChange={(e) => setphone(e.target.value)} placeholder='Phone'></input></div>
 
                     </div>
 
@@ -62,19 +117,19 @@ const Booking = () => {
                 <div className='book7'>
                     <div className='book8'>
                     <div className='book81'>Your Stay</div>
-                     <div className='book82'><div className='book83'>Date:</div><div className='book84'> Wed, Aug 9, 2023 - Thu, Aug 10, 2023</div></div>
-                     <div className='book82'><div className='book83'>Guests: </div><div className='book84'>2 Adults</div></div>
-                     <div className='book82'><div className='book83'>Stay:</div><div className='book84'> Tiny house</div></div>
-                     <div className='book82'><div className='book83'>Selected Room:</div><div className='book84'>King Room with Forest View</div></div>
+                    <div className='book82'><div className='book83'>Date:</div><div className='book84'> {pizza.dateone} - {pizza.datetwo}</div></div>
+                     <div className='book82'><div className='book83'>Guests: </div><div className='book84'>{pizza.adult} Adults - {pizza.child} Child</div></div>
+                     <div className='book82'><div className='book83'>Stay:</div><div className='book84'> {pizza.base}</div></div>
+                     <div className='book82'><div className='book83'>Selected Room:</div><div className='book84'>{pizza.stay}</div></div>
                      <div className='book82'><div className='book83'>Duration of the Stay: </div><div className='book84'> 1 Night</div></div>
                     
                      <div className='book85'>  
                         <div className='book86'><div className='book86a'><img src='Img/book2.svg'></img></div><div className='book86b'>Add a Room</div></div>
                         <hr className='bookhr1'></hr>
-                        <div className='book87'><div className='book87a'>Room's Charge</div><div className='book87b'>6000</div></div>
-                        <div className='book87 book871'><div className='book87a'>Taxes & GST</div><div className='book87b'>1200</div></div>
+                        <div className='book87'><div className='book87a'>Room's Charge</div><div className='book87b'>{room}</div></div>
+                        <div className='book87 book871'><div className='book87a'>Taxes & GST</div><div className='book87b'>{tax}</div></div>
                         <hr className='bookhr1'></hr>
-                        <div className='book88'><div className='book88a'>TOTAL</div><div className='book88b'>7200</div></div>
+                        <div className='book88'><div className='book88a'>TOTAL</div><div className='book88b'>{total}</div></div>
                     </div>
                 
 
@@ -82,9 +137,9 @@ const Booking = () => {
                     </div>
 
                          
-               <a href='booking'>   <div className='book9'>
-                        <button className='book91'>Book Now</button>
-                   </div></a>  
+                  <div className='book9' ref={hidden}>
+                        <button onClick={bookingdatas} className='book91'>Book Now</button>
+                   </div>
                      
                 </div>
 
