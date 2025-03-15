@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../Styles/Ourstays.css"
 import Navbar1 from './Navbar1'
 import Navbar2 from './Navbar2'
 import Footer2 from './Footer2'
+import { Link } from 'react-router-dom'
 
 
-const Ourstays = () => {
+const Ourstays = ({ addBase, adult  ,pizza, child , dateone , datetwo }) => {
+    // console.log("kjhgju" );
+    useEffect(()=>{
+      child(pizza.child)
+      addBase(pizza.addBase)
+      adult(pizza.adult)
+      datetwo(pizza.datetwo)
+      dateone(pizza.dateone)
+    },[])
   return (
     <>
       <div className='os1'>
@@ -34,9 +43,9 @@ const Ourstays = () => {
                       <br />- serene landscapes, fresh mountain 
                       <br />air, and cosy living, all in one place. </div>
 
-                     <a href='tinyhouseBooking'><div className='os34'>
-                        <button>BOOK NOW</button>
-                     </div></a>
+                     <Link to='/tinyhouseBooking'><div className='os34'>
+                                            <button>BOOK NOW</button>
+                                         </div></Link>
                      </div>
 
              </div>
