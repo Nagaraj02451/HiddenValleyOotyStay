@@ -19,12 +19,15 @@ app.use(cookieParser());
 const products = require('./routes/product')
 const contact = require('./routes/contact')
 const list = require('./routes/Listproperty')
-const roomlist = require('./routes/roomlist')
+const roomlist = require('./routes/roomlist');
+const booking = require('./routes/booking');
+// const { booking } = require('./controllers/bookingcontrol');
 
 app.use('/api/v1/',products);
 app.use('/api/v1/',contact);
 app.use('/api/v1/',list);
 app.use('/api/v1/',roomlist);
+app.use('/api/v1/',booking);
 
 if(process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, '../frontend/build')));
