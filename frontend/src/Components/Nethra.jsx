@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../Styles/Ourstays.css"
 import Navbar1 from './Navbar1'
 import Navbar2 from './Navbar2'
 import Footer2 from './Footer2'
+import { Link } from 'react-router-dom'
 
 
-const Nethra = () => {
+const Nethra = ({ addBase, adult , pizza , child , dateone , datetwo }) => {
+  console.log("kjhgju" , pizza.child);
+  useEffect(()=>{
+child(pizza.child)
+addBase(pizza.addBase)
+adult(pizza.adult)
+datetwo(pizza.datetwo)
+dateone(pizza.dateone)
+  },[])
   return (
     <>
       <div className='os1'>
@@ -36,9 +45,9 @@ const Nethra = () => {
                       <br />your gateway to the untouched 
                       <br />beauty of Coorg.</div>
 
-                     <a href='nethraBooking'><div className='os34'>
+                     <Link to='/nethraBooking'><div className='os34'>
                         <button>BOOK NOW</button>
-                     </div></a>
+                     </div></Link>
                      </div>
 
              </div>
