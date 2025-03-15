@@ -2,26 +2,52 @@ import React, { useRef, useState } from 'react'
 import'../Styles/Bprocess.css'
 import Navbar1 from './Navbar1'
 import Footer2 from './Footer2'
-
-const SunsetcottageBooking = () => {
+import { useEffect } from 'react'
+import { Link ,useNavigate } from 'react-router-dom'
+const SunsetcottageBooking = ({addBase, adult , pizza , child , dateone , datetwo  , stay , roomR , taxR , totalR}) => {
       const searchdfghn = useRef();
+  const navigate = useNavigate();
   
    const [room, setroom] = useState(0);
    const [tax, settax] = useState(0);
    const [total, settotal] = useState(0);
+      const [room1, setroom1] = useState("");
+  
 //    const [room1, setroom1] = useState(6000);
     const firstroom =()=>{
       searchdfghn.current.classList.add("jhuyiuytg67y")
+      setroom1("Mountain view chalets")
+        setroom(3500)
+        settax(500)
+        settotal(4000)
+        stay("Mountain view chalets")
 
-        setroom(5000)
-        settax(1000)
-        settotal(6000)
     }
     const secondroom =()=>{
-        setroom(6000)
+      searchdfghn.current.classList.add("jhuyiuytg67y")
+      setroom1("Suite chalet")
+        setroom(3500)
         settax(1200)
-        settotal(7200)
+        settotal(4000)
+        stay("Suite chalet")
     }
+    const jghftuycv = ()=>{
+      navigate('/booking',{state:{room:room,tax:tax , total:total}});
+      // console.log(room , tax , total , "iuyfygb");
+     }
+
+       useEffect(()=>{
+      child(pizza.child)
+      addBase(pizza.addBase)
+      adult(pizza.adult)
+      datetwo(pizza.datetwo)
+      dateone(pizza.dateone)
+      stay(pizza.stay)
+     
+      console.log("kjhgju" , pizza.child);
+
+      
+        },[])
   return (
     <>
     <div className='book1'>
@@ -102,7 +128,7 @@ const SunsetcottageBooking = () => {
 
                                    <div className='bpro5i'>
                                     <div></div>
-                                    <button onClick={firstroom}>Select</button>
+                                    <button onClick={secondroom}>Select</button>
                                    </div>
                              
                            </div>
@@ -138,9 +164,9 @@ const SunsetcottageBooking = () => {
              <div className='bpro4a'>
                     <div className='book8'>
                     <div className='book81'>Your Stay</div>
-                     <div className='book82'><div className='book83'>Date:</div><div className='book84'> Wed, Aug 9, 2023 - Thu, Aug 10, 2023</div></div>
-                     <div className='book82'><div className='book83'>Guests: </div><div className='book84'>2 Adults</div></div>
-                     <div className='book82'><div className='book83'>Stay:</div><div className='book84'> Sunsetcottage</div></div>
+                    <div className='book82'><div className='book83'>Date:</div><div className='book84'> {pizza.dateone} - {pizza.datetwo}</div></div>
+                     <div className='book82'><div className='book83'>Guests: </div><div className='book84'>{pizza.adult} Adults - {pizza.child} Child</div></div>
+                     <div className='book82'><div className='book83'>Stay:</div><div className='book84'> Sunset Cottage</div></div>
                      {/* <div className='book82'><div className='book83'>Selected Room:</div><div className='book84'>King Room with Forest View</div></div> */}
                      <div className='book82'><div className='book83'>Duration of the Stay: </div><div className='book84'> 1 Night</div></div>
                     
@@ -158,9 +184,10 @@ const SunsetcottageBooking = () => {
                     </div>
 
                          
-                    <a href='booking'><div className='book9' ref={searchdfghn}>
-                        <button className='book91'>Book Now</button>
-                   </div></a>
+                         
+                    <div className='book9' ref={searchdfghn}>
+                        <button onClick={jghftuycv} className='book91'>Book Now</button>
+                   </div>
                      
                 </div>
 
@@ -171,7 +198,7 @@ const SunsetcottageBooking = () => {
     </div>
 
 
-    <div className='ersaygtrhw'>
+    <div >
 
 <Footer2/>
 
