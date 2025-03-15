@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../Styles/Ourstays.css"
 import Navbar1 from './Navbar1'
 import Navbar2 from './Navbar2'
 import Footer2 from './Footer2'
+import { Link } from 'react-router-dom'
 
 
-const Sunsetvlla = () => {
+const Sunsetvlla = ({ addBase, adult , pizza , child , dateone , datetwo }) => {
+      console.log("kjhgju" , pizza.child);
+      useEffect(()=>{
+    child(pizza.child)
+    addBase(pizza.addBase)
+    adult(pizza.adult)
+    datetwo(pizza.datetwo)
+    dateone(pizza.dateone)
+      },[])
   return (
     <>
       <div className='os1'>
@@ -35,9 +44,9 @@ const Sunsetvlla = () => {
                       <br /> immerse yourself in nature’s beauty—all
                       <br /> from the heart of South Coorg.</div>
 
-                     <a href='sunsetVillaBooking'><div className='os34'>
+                     <Link to='/sunsetVillaBooking'><div className='os34'>
                         <button>BOOK NOW</button>
-                     </div></a>
+                     </div></Link>
                      </div>
 
              </div>
