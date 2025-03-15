@@ -25,19 +25,10 @@ const Contact = () => {
                     message : message
                 });
                 alert("Your details has been received successfully")
-                toast.success(
-                    `Hello ${email} your details has been received successfully. Our team will contact you soon!!!`,
-                    {
-                        position: "bottom-top",
-                    }
-                );
+              
             } else {
-                toast.success(
-                    `Please fill !`,
-                    {
-                        position: "bottom-top",
-                    }
-                );
+                alert("Please fill all details")
+
             }
         } catch (error) {
             console.log(error.message);
