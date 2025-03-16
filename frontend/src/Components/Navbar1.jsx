@@ -35,7 +35,7 @@ const Navbar1 = () => {
         {/* <img  onClick={toggle} src='Img/nav1.svg'></img> */}
    
          <a href='property' className='nav1a'>LIST YOUR PROPERTY</a>
-         <a href='' className='nav1a'>+91 5235 2523 53</a>
+         <a href='tel:+9611588968' className='nav1a'>+91 9611588968</a>
        </div>
 
 
