@@ -11,7 +11,6 @@ import Footer2 from './Components/Footer2';
 import Property from './Components/Property';
 import Booking from './Components/Booking';
 import Bprocess from './Components/Bprocess';
-import { ToastContainer } from 'react-toastify';
 import Sites from './Components/Sites';
 import Riverside from './Components/Riverside';
 import Sunstcottage from './Components/Sunstcottage';
@@ -24,6 +23,7 @@ import NethraBooking from './Components/NethraBooking';
 import Privacy from './Components/Privacy';
 import Terms from './Components/Terms';
 import Refund from './Components/Refund';
+// import { ToastContainer } from "react-toastify";
 
 
 const Pages = () => {
@@ -65,9 +65,6 @@ const Pages = () => {
   return (
     <>
     <BrowserRouter>
-    <ToastContainer theme='dark' />
-
-      
     
      <Routes>
 
@@ -76,12 +73,12 @@ const Pages = () => {
        <Route path='/footer1' element={<Footer1/>}></Route>
        <Route path='/footer2' element={<Footer2/>}></Route>
 
-       <Route path='/' element={<Frontpage1  addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>  
+       <Route path='/' element={<Frontpage1  addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} roomR={roomR} />}></Route>  
        <Route path='/hinyhouse' element={<Ourstays roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
        <Route path='/riverside' element={<Riverside roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
        <Route path='/sunsetcottage' element={<Sunstcottage roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
        <Route path='/sunsetvilla' element={<Sunsetvlla roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
-       <Route path='/nethra' element={<Nethra stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
+       <Route path='/nethra' element={<Nethra roomR={roomR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
        <Route path='/contact' element={<Contact/>}></Route>
        <Route path='/property' element={<Property/>}></Route>
        <Route path='/booking' element={<Booking pizza={pizza} />}></Route>
