@@ -6,7 +6,7 @@ import Footer2 from './Footer2'
 import { Link } from 'react-router-dom'
 
 
-const Ourstays = ({ addBase, adult  ,pizza, child , dateone , datetwo }) => {
+const Ourstays = ({ addBase, adult  ,pizza, child , dateone , datetwo  , roomR}) => {
     // console.log("kjhgju" );
     useEffect(()=>{
       child(pizza.child)
@@ -14,6 +14,9 @@ const Ourstays = ({ addBase, adult  ,pizza, child , dateone , datetwo }) => {
       adult(pizza.adult)
       datetwo(pizza.datetwo)
       dateone(pizza.dateone)
+      roomR(pizza.roomR)
+
+
     },[])
   return (
     <>
