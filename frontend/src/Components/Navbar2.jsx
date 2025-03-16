@@ -31,7 +31,8 @@ const Navbar2 = () => {
         <img src='Img/nav2.svg'></img>
         </a>
          <a href='property' className='nav11a'>LIST YOUR PROPERTY</a>
-         <a href='' className='nav11a'>+91 5235 2523 53</a>
+         <a href='tel:+9611588968' className='nav1a'>+91 9611588968</a>
+
        </div>
 
 
