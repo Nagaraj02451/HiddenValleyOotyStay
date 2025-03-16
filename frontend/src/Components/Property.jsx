@@ -20,6 +20,8 @@ const Property = () => {
       //  alert("df")
        try {
            if (email) {
+            alert("Property details has been received successfully. Our team will contact you soon!!!")
+
                const result = await axios.post("/api/v1/listproperty", {
                    name : name,
                    surname : surname,
