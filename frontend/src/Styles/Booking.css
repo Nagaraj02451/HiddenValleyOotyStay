@@ -21,7 +21,7 @@
 
 }
 .book22{
-    /* margin-left: 1vw; */
+    margin-left: 1vw;
     width: 100%;
     font-size: 2.6vw;
     line-height: 2.8vw;
@@ -205,7 +205,19 @@
     font-size: 1.1vw;
     line-height: 1.1vw;
     font-family:axi400;
+    display: flex;
     margin-left: 0.3vw;
+    /* border: 1px solid red; */
+}
+#jhfvyhg{
+    width: 7vw;
+    margin-top: -1vw;
+    border: none;
+    background: transparent;
+    /* height: 80%; */
+}
+.jufgtubook84{
+    margin-left: 1vw;
 }
 .book85{
     margin-top: 1vw;
@@ -272,6 +284,14 @@
     line-height: 1.1vw;
     font-family:axi400;
 }
+.iuhgfyuyt6{
+    font-weight: 600;
+    color: red;
+    font-size: 1.1vw;
+    line-height: 1.1vw;
+    font-family:axi400;
+}
+
 .book9{
     width: 100%;
     margin-top: 0.3vw;
@@ -498,6 +518,15 @@
     line-height: 14px;
     font-family:axi400;
 }
+
+#jhfvyhg{
+    width: 20vw;
+
+   
+}
+.jufgtubook84{
+    margin-left: 2vw;
+}
 .book88{
     display: flex;
     justify-content: space-between;
@@ -515,6 +544,9 @@
     font-size: 14px;
     line-height: 14px;
     font-family:axi400;
+}
+.iuhgfyuyt6{
+    font-size: 14px;
 }
 .book9{
     width: 100%;
