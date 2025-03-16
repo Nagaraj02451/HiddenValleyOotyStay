@@ -1,7 +1,8 @@
 .cnt1{
-
 }
 .cnt2{
+/* border: 2px solid red; */
+
     width: 94%;
     margin-left: 3%;
     margin-top: 2%;
@@ -24,6 +25,8 @@
     margin-top: 3%;
     display: flex;
     justify-content: space-between;
+    /* text-align: center; */
+    /* border: 1px solid red; */
 }
 .cnt3{
     margin-top: 5%;
@@ -180,6 +183,9 @@
 }
 .jhcgvkuy{
     display: flex;
+    padding: 1vw 0;
+    /* border: 1px solid red; */
+    justify-content: center;
 }
 .cnt41d ::placeholder{
     font-family: axi400;
@@ -275,9 +281,12 @@
         padding-top: 8%;
         padding-bottom: 7%;
     }
+
     .jyfu6ty{
         display: inline;
-        text-align: center;
+        justify-content: center;
+        /* border: 2px solid red; */
+        /* text-align: end; */
     }
     .cnt35a{
         width: 120px;
