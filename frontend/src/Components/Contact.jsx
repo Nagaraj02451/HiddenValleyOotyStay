@@ -3,7 +3,8 @@ import '../Styles/Contact.css'
 import Navbar1 from './Navbar1'
 import axios from "axios"
 import Footer2 from './Footer2'
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+
 
 
 const Contact = () => {
@@ -17,6 +18,9 @@ const Contact = () => {
         // alert("df")
         try {
             if (email) {
+                 // console.log(result , "iuhjb");
+                alert("Contact details has been received successfully. Our team will contact you soon!!!")
+
                 const result = await axios.post("/api/v1/contact", {
                     name : name,
                     surname : surname,
@@ -24,7 +28,7 @@ const Contact = () => {
                     email: email,
                     message : message
                 });
-                alert("Your details has been received successfully")
+               
               
             } else {
                 alert("Please fill all details")
@@ -36,8 +40,11 @@ const Contact = () => {
     };
     return (
         <>
+
             <div className='cnt1'>
+                
                 <div className='cnt2'>
+
                     <Navbar1 />
 
                     <div className='cnt3'>
@@ -46,10 +53,10 @@ const Contact = () => {
                         <div className='cnt32'>CONTACT US</div>
 
                         <div className='jyfu6ty'>
-                           <a href="tel:+9611588968"> <div className='jhcgvkuy'><div><span className='hjcgg'>Call :</span> </div> +91 9611588968/ +91 6362757985</div></a>
+                           <a href="tel:+9611588968" > <div className='jhcgvkuy'><div > <span className='hjcgg'>Call :</span> </div> +91 9611588968/ +91 6362757985</div></a>
                             <a href="mailto:hello@hiddenvalleystays.com" ><div className='jhcgvkuy'>
                                 <div><span className='hjcgg'>For Enquiry :</span>  </div> hello@hiddenvalleystays.com</div></a>
-                            <div className='jhcgvkuy'><div><span className='hjcgg'>Address :</span> </div> Coorg, Karnataka</div>
+                            <a><div className='jhcgvkuy'><div><span className='hjcgg'>Address :</span> </div> Coorg, Karnataka</div></a>
                         </div>
                         </div>
 
