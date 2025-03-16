@@ -19,20 +19,26 @@ exports.booking = catchAsyncError(async (req, res, next) => {
     // console.log(email,password , "bunbuhb");
     if(email){
     
-        alert("Send successfully")
-
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            auth: {
-                user: "files.aweganyz@gmail.com",
-                pass: "dlovgnhexemnhnlq"
-            }
-        });
-        const mailOptions = {
-            from: "hello@hiddenvalleystays.com",
-            to: email ,  
-            subject: "Booking",
-            html: `
+    const transporter = nodemailer.createTransport({
+         host: "smtppro.zoho.in",
+         port: 465,
+         secure: true,
+         logger: true,
+         debug: true,
+         secureConnection: false,
+         auth: {
+           user: process.env.MAILZOHOBOOKING,
+           pass: process.env.MAILPASSWORDbOOKING
+         },
+         tls: {
+           rejectUnauthorized: true
+         }
+       });
+       const mailOptions = {
+         from: process.env.MAILZOHOBOOKING,
+         to: email,
+         subject: "Boooking - HiddenValleyStay",
+         html: `
             <div style="height: auto; width:100% ;backgroud-color:white; padding:30px">
    
          <p style="padding:1px">  Name : ${name}</p>
@@ -53,19 +59,22 @@ exports.booking = catchAsyncError(async (req, res, next) => {
               
         
           `
-        };
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                console.log("Error" + error)
-            } else {
-                console.log("Email sent:" + info.response);
-                // res.status(201).json({status:201,info})
-            }
+       };
+   
+       // Send email
+       transporter.sendMail(mailOptions, (error, info) => {
+         if (error) {
+           console.error("Error sending email:", error);
+         } else {
+           console.log("Email sent successfully:", info.response);
+         }
+       });
+   
+   
+     }
+     
+ 
       
-        })
-        
-    }
-
    
 
 })
