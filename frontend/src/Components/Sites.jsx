@@ -80,9 +80,10 @@ export default function Sites() {
                                     </div>
                                 </div>
                       
-                        <Footer2 />
                     </div>
                 </div>
+                <Footer2 />
+
             </div>
         </Fragment>
     )
