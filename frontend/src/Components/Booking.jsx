@@ -8,6 +8,8 @@ import {useLocation, useNavigate } from 'react-router-dom'
 
 const Booking = ({pizza}) => {
              const hidden = useRef();
+             console.log(pizza.datetwo , "uggyft");
+             
     
       const location = useLocation();
       const[room , setroom] = useState("")
@@ -25,6 +27,8 @@ const Booking = ({pizza}) => {
         // alert("df")
         try {
             if (email) {
+                alert("Booking details has been received successfully. Our team will contact you soon!!!")
+
                 const result = await axios.post("/api/v1/booking", {
                     name : per,
                     email: email,
