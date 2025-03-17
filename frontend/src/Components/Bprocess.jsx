@@ -279,9 +279,9 @@ settax(newTax)
           </div>
         </div>
 
-        <div>
-          <Footer2 />
-        </div>
+        <div className='iuytrgioh'>
+  <Footer2 />
+  </div>
       </div>
     </>
   );
