@@ -15,6 +15,8 @@ const Frontpage1 = ({
   dateone,
   datetwo,
   roomR,
+  taxR,
+  totalR
 }) => {
   const bases = [
     "ALL STAYS",
@@ -25,7 +27,7 @@ const Frontpage1 = ({
     "TINYHOUSE",
   ];
   const [delivery, setdelivery] = useState("");
-  //   console.log(delivery , "uiyigf");
+   
   const navigate = useNavigate();
 
   const [datefirst, setDate] = useState(new Date());
@@ -77,7 +79,8 @@ const Frontpage1 = ({
   };
   const hgfdutydc = () => {
     datetwo(date1.toString().slice(0, 15));
-
+    //  taxR(Number(pizza.dateone.slice(8,10)))
+    //  totalR(Number(pizza.datetwo.slice(8,10)))
     if (delivery === "SUNSET COTTAGE") {
       // alert("giu")
       navigate("/sunsetcottage");
