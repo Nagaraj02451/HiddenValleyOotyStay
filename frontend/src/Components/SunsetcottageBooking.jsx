@@ -26,12 +26,16 @@ const SunsetcottageBooking = ({
   const [tax, settax] = useState(0);
   const [total, settotal] = useState(0);
   const [room1, setroom1] = useState("");
+  const [first, setfirst] = useState("");
+  const [second, setsecond] = useState("");
+  const [last, setlast] = useState("");
   const [datefirst, setDate] = useState(new Date());
   const [date1, setDate1] = useState(new Date());
-  
+  console.log(first,second, "dfghycjy");
 
   const increment = () => {
     setcount(count + 1);
+    setsecond(Number(date1.toString().slice(8, 10)));
     adult(count + 1);
     if (count >= 3) {
       alert("Only 5 Members allowed");
@@ -64,32 +68,53 @@ const SunsetcottageBooking = ({
   };
   //    const [room1, setroom1] = useState(6000);
   const firstroom = () => {
-    searchdfghn.current.classList.add("jhuyiuytg67y");
-    setroom1("Mountain view chalets");
-    setroom(3500);
-    settax(500);
-    settotal(4000);
-    stay("Mountain view chalets");
-  };
-  const secondroom = () => {
-    searchdfghn.current.classList.add("jhuyiuytg67y");
-    setroom1("Suite chalet");
-    setroom(3500);
-    settax(1200);
-    settotal(4000);
-    stay("Suite chalet");
-  };
-  const iugyfgu =()=>{
-    dateone(datefirst.toString().slice(0, 15))
-
-  }
-  const jghftuycv = () => {
-    navigate("/booking", { state: { room: room, tax: tax, total: total } });
-    // console.log(room , tax , total , "iuyfygb");
-    if(pizza.roomR !== 10){
-      datetwo(date1.toString().slice(0, 15))
+    const datasin = second - first;
+    const newRoom = 3500 * datasin;
+    const newTax = 500 * datasin;
+    const newTotal = newRoom + newTax;
+    setlast(second - first);
+    try {
+        searchdfghn.current.classList.add("jhuyiuytg67y");
+        setroom1("Mountain view chalets");
+        stay("Mountain view chalets");
+setroom(newRoom)
+settax(newTax)
+        // Update total once at the end, without conditions
+        settotal(newTotal);
+    } catch (error) {
+        console.error("Error occurred: ", error);
     }
+};
+  const secondroom = () => {
+    const datasin = second - first;
+    const newRoom = 3500 * datasin;
+    const newTax = 500 * datasin;
+    const newTotal = newRoom + newTax;
+    setlast(second - first);
+    try {
+      searchdfghn.current.classList.add("jhuyiuytg67y");
+      setroom1("Suite chalet");
+      stay("Suite chalet");
+setroom(newRoom)
+settax(newTax)
+      // Update total once at the end, without conditions
+      settotal(newTotal);
+  } catch (error) {
+      console.error("Error occurred: ", error);
+  }
+  
+  };
+  const iugyfgu = () => {
+    dateone(datefirst.toString().slice(0, 15));
+    setfirst(Number(pizza.dateone.slice(8, 10)));
 
+  };
+  const jghftuycv = () => {
+    navigate("/booking", { state: { room: room, tax: tax, total: total , last :last } });
+    // console.log(room , tax , total , "iuyfygb");
+    if (pizza.roomR !== 10) {
+      datetwo(date1.toString().slice(0, 15));
+    }
   };
 
   useEffect(() => {
@@ -99,7 +124,8 @@ const SunsetcottageBooking = ({
     datetwo(pizza.datetwo);
     dateone(pizza.dateone);
     stay(pizza.stay);
-
+    setfirst(Number(pizza.dateone.slice(8, 10)));
+    setsecond(Number(pizza.datetwo.slice(8, 10)));
     console.log("kjhgju", pizza.child);
   }, []);
   return (
@@ -171,16 +197,7 @@ const SunsetcottageBooking = ({
                         </div>
                       </div>
                     </div>
-                    {/* <div className='bpro52a'>2 Bedroom Chalet</div>
-                               <div className='bpro52b'>Sleeps 2 | 100m2</div>
-                               <div className='bpro52c'>Explore our array of thoughtfully designed rooms, each tailored to offer comfort and a touch of luxury, whether you're traveling with family, your loved one, or for business.</div>
-                               <div className='bpro52d'>Room details</div> */}
-                    {/* <hr className='bprohr1'></hr> */}
-
-                    {/* <div className='bpro52f'>
-                                      <div className='bpro52g'>Rupees 5000 per night</div>
-                                      <div className='bpro52h'>Excluding Taxes & Fees</div>
-                                   </div> */}
+                    
                     <hr className="bprohr1"></hr>
 
                     <div className="bpro5i">
@@ -190,26 +207,7 @@ const SunsetcottageBooking = ({
                   </div>
                 </div>
 
-                {/* <div className='bpro5'>
-                           <div className='bpro51'><img src='Img/bpro1.svg'></img></div>
-                           <div className='bpro52'>
-                               <div className='bpro52a'>King Room with Forest View</div>
-                               <div className='bpro52b'>Sleeps 2 | 100m2</div>
-                               <div className='bpro52c'>Explore our array of thoughtfully designed rooms, each tailored to offer comfort and a touch of luxury, whether you're traveling with family, your loved one, or for business.</div>
-                               <div className='bpro52d'>Room details</div>
-                               <hr className='bprohr1'></hr>
-                               <div className='bpro52e'>
-                                   <div className='bpro52f'>
-                                      <div className='bpro52g'>Rupees 6000 per night</div>
-                                      <div className='bpro52h'>Excluding Taxes & Fees</div>
-                                   </div>
-                                   <div className='bpro5i'>
-                                    <button onClick={secondroom}>Select</button>
-                                   </div>
-                               </div>
-                           </div>
-                           
-                      </div> */}
+              
               </div>
 
               <div className="bpro4a">
@@ -217,33 +215,33 @@ const SunsetcottageBooking = ({
                   <div className="book81">Your Stay</div>
                   <div className="book82">
                     <div className="book83">Date:</div>
-                     {pizza.roomR === 10 ? (
-                                          <div className="book84">
-                                            {" "}
-                                            {pizza.dateone} - {pizza.datetwo}
-                                          </div>
-                                        ) : (
-                                          <div className="book84">
-                                            <DatePicker
-                                              id="jhfvyhg"
-                                              placeholderText="CHECK IN"
-                                              selected={datefirst}
-                                              onChange={(datefirst) => setDate(datefirst)}
-                                            />
-                    
-                                            <span>to</span>
-                                          <div onClick={iugyfgu}>
-                                          <DatePicker
-                                              id="jhfvyhg"
-                                              className="jufgtubook84"
-                                              placeholderText="CHECK OUT"
-                                              selected={date1}
-                                              onChange={(date) => setDate1(date)}
-                                            />
-                                          </div>
-                                            <div className="iuhgfyuyt6"> Change</div>
-                                          </div>
-                                        )}
+                    {pizza.roomR === 10 ? (
+                      <div className="book84">
+                        {" "}
+                        {pizza.dateone} - {pizza.datetwo}
+                      </div>
+                    ) : (
+                      <div className="book84">
+                        <DatePicker
+                          id="jhfvyhg"
+                          placeholderText="CHECK IN"
+                          selected={datefirst}
+                          onChange={(datefirst) => setDate(datefirst)}
+                        />
+
+                        <span>to</span>
+                        <div onClick={iugyfgu}>
+                          <DatePicker
+                            id="jhfvyhg"
+                            className="jufgtubook84"
+                            placeholderText="CHECK OUT"
+                            selected={date1}
+                            onChange={(date) => setDate1(date)}
+                          />
+                        </div>
+                        <div className="iuhgfyuyt6"> Change</div>
+                      </div>
+                    )}
                   </div>
 
                   <div className="book82">
@@ -274,7 +272,7 @@ const SunsetcottageBooking = ({
                   {/* <div className='book82'><div className='book83'>Selected Room:</div><div className='book84'>King Room with Forest View</div></div> */}
                   <div className="book82">
                     <div className="book83">Duration of the Stay: </div>
-                    <div className="book84"> 1 Night</div>
+                    <div className="book84"> {last} Night</div>
                   </div>
 
                   <div className="book85">
