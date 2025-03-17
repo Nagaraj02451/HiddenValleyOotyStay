@@ -112,7 +112,8 @@ settax(newTax)
 
   }
   const jghftuycv = () => {
-    navigate("/booking", { state: { room: room, tax: tax, total: total } });
+       navigate("/booking", { state: { room: room, tax: tax, total: total , last :last } });
+   
     if(pizza.roomR !== 10){
       datetwo(date1.toString().slice(0, 15))
     }
