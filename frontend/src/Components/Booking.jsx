@@ -4,7 +4,7 @@ import Navbar2 from './Navbar2'
 import Navbar1 from './Navbar1'
 import Footer2 from './Footer2'
 import axios from "axios"
-import {useLocation, useNavigate } from 'react-router-dom'
+import {useLocation, useNavigate ,Link} from 'react-router-dom'
 
 const Booking = ({pizza}) => {
              const hidden = useRef();
@@ -152,10 +152,13 @@ const Booking = ({pizza}) => {
             </div>
 
         </div>
+    
 
     </div>
-   </div>
+  <div className='iuytrgioh'>
   <Footer2 />
+  </div>
+   </div>
    </>
   )
 }
