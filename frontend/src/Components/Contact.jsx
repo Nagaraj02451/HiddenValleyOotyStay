@@ -54,8 +54,12 @@ const Contact = () => {
 
                         <div className='jyfu6ty'>
                            <a href="tel:+9611588968" > <div className='jhcgvkuy'><div > <span className='hjcgg'>Call :</span> </div> +91 9611588968/ +91 6362757985</div></a>
-                            <a href="mailto:hello@hiddenvalleystays.com" ><div className='jhcgvkuy'>
-                                <div><span className='hjcgg'>For Enquiry :</span>  </div> hello@hiddenvalleystays.com</div></a>
+                           <div>
+                           <a href="mailto:hello@hiddenvalleystays.com" ><div className='jhcgvkuy'>
+                           <div><span className='hjcgg'>For Enquiry :</span>  </div> hello@hiddenvalleystays.com</div></a>
+                           <a href="mailto:reservation@hiddenvalleystays.com" ><div className='jhcgvkuy'>
+                           <div><span className='hjcgg'>For Reservations: </span>  </div>reservation@hiddenvalleystays.com</div></a>
+                           </div>
                             <a><div className='jhcgvkuy'><div><span className='hjcgg'>Address :</span> </div> Coorg, Karnataka</div></a>
                         </div>
                         </div>
