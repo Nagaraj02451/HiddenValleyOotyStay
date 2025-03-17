@@ -147,7 +147,7 @@ settax(newTax)
     setfirst(Number(pizza.dateone.slice(8, 10)));
   }
   const jghftuycv = () => {
-    navigate("/booking", { state: { room: room, tax: tax, total: total } });
+    navigate("/booking", { state: { room: room, tax: tax, total: total , last :last } });
     // console.log(room , tax , total , "iuyfygb");
     if(pizza.roomR !== 10){
       datetwo(date1.toString().slice(0, 15))
