@@ -29,6 +29,7 @@ const RiversideBooking = ({
   const [tax, settax] = useState(0);
   const [total, settotal] = useState(0);
   const [room1, setroom1] = useState(6000);
+      const [base, setbase] = useState("Riverside");
     const [datefirst, setDate] = useState(new Date());
     const [date1, setDate1] = useState(new Date());
     const increment = () => {
@@ -147,7 +148,7 @@ settax(newTax)
     setfirst(Number(pizza.dateone.slice(8, 10)));
   }
   const jghftuycv = () => {
-    navigate("/booking", { state: { room: room, tax: tax, total: total , last :last } });
+    navigate("/booking", { state: { room: room, tax: tax, total: total , last :last , base : base } });
     // console.log(room , tax , total , "iuyfygb");
     if(pizza.roomR !== 10){
       datetwo(date1.toString().slice(0, 15))
@@ -161,6 +162,7 @@ settax(newTax)
     datetwo(pizza.datetwo);
     dateone(pizza.dateone);
     stay(pizza.stay);
+    roomR(pizza.roomR)
     setfirst(Number(pizza.dateone.slice(8, 10)));
     setsecond(Number(pizza.datetwo.slice(8, 10)));
 
