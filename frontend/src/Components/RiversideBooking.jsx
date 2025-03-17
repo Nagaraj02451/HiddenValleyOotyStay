@@ -22,7 +22,9 @@ const RiversideBooking = ({
   const navigate = useNavigate();
   const [count, setcount] = useState(0);
   const [count1, setcount1] = useState(0);
-
+  const [first, setfirst] = useState("");
+  const [second, setsecond] = useState("");
+  const [last, setlast] = useState("");
   const [room, setroom] = useState(0);
   const [tax, settax] = useState(0);
   const [total, settotal] = useState(0);
@@ -31,6 +33,7 @@ const RiversideBooking = ({
     const [date1, setDate1] = useState(new Date());
     const increment = () => {
       setcount(count + 1);
+    setsecond(Number(date1.toString().slice(8, 10)));
       adult(count + 1);
       if (count >= 3) {
         alert("Only 5 Members allowed");
@@ -62,40 +65,86 @@ const RiversideBooking = ({
       }
     };
   const firstroom = () => {
-    searchdfghn.current.classList.add("jhuyiuytg67y");
+    const datasin = second - first;
+    const newRoom = 4800 * datasin;
+    const newTax = 800 * datasin;
+    const newTotal = newRoom + newTax;
+    setlast(second - first);
+    try {
+      searchdfghn.current.classList.add("jhuyiuytg67y");
     setroom1("Farmhouse Family Room");
-    setroom(4800);
-    settax(600);
-    settotal(5400);
     stay("Farmhouse Family Room");
+setroom(newRoom)
+settax(newTax)
+      // Update total once at the end, without conditions
+      settotal(newTotal);
+  } catch (error) {
+      console.error("Error occurred: ", error);
+  }
+ 
+
   };
   const secondroom = () => {
-    searchdfghn.current.classList.add("jhuyiuytg67y");
-    setroom1("Farmhouse Dorm Room");
-    setroom(4800);
-    settax(600);
-    settotal(5400);
-    stay("Farmhouse Dorm Room");
+    const datasin = second - first;
+    const newRoom = 4800 * datasin;
+    const newTax = 800 * datasin;
+    const newTotal = newRoom + newTax;
+    setlast(second - first);
+    try {
+      searchdfghn.current.classList.add("jhuyiuytg67y");
+      setroom1("Farmhouse Dorm Room");
+      stay("Farmhouse Dorm Room");
+setroom(newRoom)
+settax(newTax)
+      // Update total once at the end, without conditions
+      settotal(newTotal);
+  } catch (error) {
+      console.error("Error occurred: ", error);
+  }
+
   };
   const thirdroom = () => {
-    searchdfghn.current.classList.add("jhuyiuytg67y");
+    const datasin = second - first;
+    const newRoom = 3000 * datasin;
+    const newTax = 300 * datasin;
+    const newTotal = newRoom + newTax;
+    setlast(second - first);
+    try {
+      searchdfghn.current.classList.add("jhuyiuytg67y");
     setroom1("Treehouse Hillview Room");
-    setroom(3000);
-    settax(500);
-    settotal(3500);
     stay("Treehouse Family Room");
+setroom(newRoom)
+settax(newTax)
+      // Update total once at the end, without conditions
+      settotal(newTotal);
+  } catch (error) {
+      console.error("Error occurred: ", error);
+  }
+
+  
   };
   const fouthroom = () => {
-    searchdfghn.current.classList.add("jhuyiuytg67y");
-    setroom1("Treehouse Family Room");
-    setroom(3000);
-    settax(500);
-    settotal(3500);
-    stay("Treehouse Family Room");
+    const datasin = second - first;
+    const newRoom = 3000 * datasin;
+    const newTax = 300 * datasin;
+    const newTotal = newRoom + newTax;
+    setlast(second - first);
+    try {
+      searchdfghn.current.classList.add("jhuyiuytg67y");
+      setroom1("Treehouse Family Room");
+      stay("Treehouse Family Room");
+setroom(newRoom)
+settax(newTax)
+      // Update total once at the end, without conditions
+      settotal(newTotal);
+  } catch (error) {
+      console.error("Error occurred: ", error);
+  }
+
   };
   const iugyfgu =()=>{
     dateone(datefirst.toString().slice(0, 15))
-
+    setfirst(Number(pizza.dateone.slice(8, 10)));
   }
   const jghftuycv = () => {
     navigate("/booking", { state: { room: room, tax: tax, total: total } });
@@ -112,6 +161,8 @@ const RiversideBooking = ({
     datetwo(pizza.datetwo);
     dateone(pizza.dateone);
     stay(pizza.stay);
+    setfirst(Number(pizza.dateone.slice(8, 10)));
+    setsecond(Number(pizza.datetwo.slice(8, 10)));
 
     console.log("kjhgju", pizza.child);
   }, []);
@@ -359,7 +410,7 @@ const RiversideBooking = ({
                   {/* <div className='book82'><div className='book83'>Selected Room:</div><div className='book84'>King Room with Forest View</div></div> */}
                   <div className="book82">
                     <div className="book83">Duration of the Stay: </div>
-                    <div className="book84"> 1 Night</div>
+                    <div className="book84"> {last} Night</div>
                   </div>
 
                   <div className="book85">
