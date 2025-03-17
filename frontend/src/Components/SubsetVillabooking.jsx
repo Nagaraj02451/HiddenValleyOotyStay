@@ -30,6 +30,8 @@ const SubsetVillabooking = ({
   const [room1, setroom1] = useState(6000);
   const [datefirst, setDate] = useState(new Date());
   const [date1, setDate1] = useState(new Date());
+    const [base, setbase] = useState("Sunset Villa");
+  
     const [first, setfirst] = useState("");
     const [second, setsecond] = useState("");
     const [last, setlast] = useState("");
@@ -112,7 +114,7 @@ settax(newTax)
 
   }
   const jghftuycv = () => {
-       navigate("/booking", { state: { room: room, tax: tax, total: total , last :last } });
+    navigate("/booking", { state: { room: room, tax: tax, total: total , last :last , base : base } });
    
     if(pizza.roomR !== 10){
       datetwo(date1.toString().slice(0, 15))
@@ -127,6 +129,7 @@ settax(newTax)
     datetwo(pizza.datetwo);
       dateone(pizza.dateone);
     stay(pizza.stay);
+    roomR(pizza.roomR)
     setfirst(Number(pizza.dateone.slice(8, 10)));
     setsecond(Number(pizza.datetwo.slice(8, 10)));
 
@@ -216,6 +219,7 @@ settax(newTax)
                         <DatePicker
                           id="jhfvyhg"
                           placeholderText="CHECK IN"
+                          className="jufgtubook84"
                           selected={datefirst}
                           onChange={(datefirst) => setDate(datefirst)}
                         />
