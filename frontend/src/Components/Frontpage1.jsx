@@ -217,75 +217,78 @@ const Frontpage1 = ({
             <div className="ufygu">
               <p className="iuyrtf87iyug">Book your stay with us</p>
               <select
-                value={delivery}
-                onChange={(e) => setdelivery(e.target.value)}
-              >
-                {bases.map((base) => {
-                  let spanClass = pizza.base === base ? "active" : "";
-                  return (
-                    <option key={base} onClick={() => addBase(base)}>
-                      <span className={spanClass}>{base}</span>
-                    </option>
-                  );
-                })}
-              </select>
+                  value={delivery}
+                  onChange={(e) => setdelivery(e.target.value)}
+                >
+                  {bases.map((base) => {
+                    let spanClass = pizza.base === base ? "active" : "";
+                    return (
+                      <option key={base} onClick={() => addBase(base)}>
+                        <span className={spanClass}>{base}</span>
+                      </option>
+                    );
+                  })}
+                </select>
               <div className="uytfdu6ty">
-                <div className="yutdfrt6uy">
-                  {/* <div>ugyhf</div> */}
-                  <span className="uytrfd6u7tyf"></span>
-                  <DatePicker
-                    id="uytr7iy"
-                    placeholderText="CHECK IN"
-                    selected={datefirst}
-                    onChange={(datefirst) => setDate(datefirst)}
-                  />
-
-                  {/* <input type='text' placeholder='CHECK OUT' /> */}
-                </div>
-                <div className="yutdfrt6uy">
-                  {/* <div>ugyhf</div> */}
-                  <span className="uytrfd6u7tyf"></span>
-                  <DatePicker
-                    id="uytr7iy"
-                    placeholderText="CHECK OUT"
-                    selected={date1}
-                    onChange={(date) => setDate1(date)}
-                  />
+              <div className="yutdfrt6uy" onClick={iugyfyfug} >
+                    {/* <div>ugyhf</div> */}
+                    <span className="uytrfd6u7tyf"></span>
+                    {/* <input type='text' placeholder='CHECK IN ' /> */}
+                    <DatePicker
+                      id="uytr7iy"
+                      placeholderText="CHECK IN"
+                      className="jufgtubook84"
+                      selected={datefirst}
+                      onChange={(datefirst) => setDate(datefirst)}
+                    />
+                    {/* <input type='text' placeholder='CHECK OUT' /> */}
+                  </div>
+                  <div className="yutdfrt6uy" onClick={hgcytfuyf}>
+                    {/* <div>ugyhf</div> */}
+                    <span className="uytrfd6u7tyf"></span>
+                    {/* <input type='text' placeholder='CHECK OUT ' /> */}
+                    <DatePicker
+                      id="uytr7iy"
+                      placeholderText="CHECK OUT"
+                      className="jufgtubook84"
+                      selected={date1}
+                      onChange={(date) => setDate1(date)}
+                    />
 
                   {/* <input type='text' placeholder='CHECK OUT' /> */}
                 </div>
               </div>
               <hr />
               <div className="uy6trf7856">
-                <p id="uy6trf7856">ADULTS</p>
-                <div className="iuy7tf7i">
-                  <div onClick={decrement} className="uytrf657fg">
-                    -
-                  </div>
-                  <div>{count}</div>
-                  <div onClick={increment} className="uytrf657fg">
-                    +
+              <p id="uy6trf7856">ADULTS</p>
+                  <div className="iuy7tf7i">
+                    <div onClick={decrement} className="uytrf657fg">
+                      -
+                    </div>
+                    <div className="jhgfuyv">{count}</div>
+                    <div onClick={increment} className="uytrf657fg">
+                      +
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="uy6trf7856">
-                <p id="uy6trf7856">CHILDERN (0-11)</p>
-                <div className="iuy7tf7i">
-                  <div onClick={decrement1} className="uytrf657fg">
-                    -
-                  </div>
-                  <div>{count1}</div>
-                  <div onClick={increment1} className="uytrf657fg">
-                    +
+                <div className="uy6trf7856">
+                  <p id="uy6trf7856">CHILDERN (0-11)</p>
+                  <div className="iuy7tf7i">
+                    <div onClick={decrement1} className="uytrf657fg">
+                      -
+                    </div>
+                    <div className="jhgfuyv">{count1}</div>
+                    <div onClick={increment1} className="uytrf657fg">
+                      +
                   </div>
                 </div>
               </div>
 
               <div className="ytrfg7yu" onClick={hgfdutydc}>
-                {" "}
-                <div className="uytedr756fg">
-                  <span className="uytrfd6u7tyf1"></span>
-                  <div className="iuyfgt6ty">SEARCH</div>
+                  {" "}
+                  <div className="uytedr756fg">
+                    <span className="uytrfd6u7tyf1"></span>
+                    <div className="iuyfgt6ty">SEARCH</div>
                 </div>
               </div>
             </div>
