@@ -15,6 +15,7 @@ const Booking = ({pizza}) => {
       const[room , setroom] = useState("")
       const[tax , settax] = useState("")
       const[total , settotal] = useState("")
+      const[last , setlast] = useState("")
       const[per , setper] = useState("")
       const[email , setemail] = useState("")
       const[phone , setphone] = useState("")
@@ -62,6 +63,7 @@ const Booking = ({pizza}) => {
         setroom(location.state.room)
         settax(location.state.tax)
         settotal(location.state.total)
+        setlast(location.state.last)
       }
    },[])
   return (
@@ -125,7 +127,7 @@ const Booking = ({pizza}) => {
                      <div className='book82'><div className='book83'>Guests: </div><div className='book84'>{pizza.adult} Adults - {pizza.child} Child</div></div>
                      <div className='book82'><div className='book83'>Stay:</div><div className='book84'> {pizza.base}</div></div>
                      <div className='book82'><div className='book83'>Selected Room:</div><div className='book84'>{pizza.stay}</div></div>
-                     <div className='book82'><div className='book83'>Duration of the Stay: </div><div className='book84'> 1 Night</div></div>
+                     <div className='book82'><div className='book83'>Duration of the Stay: </div><div className='book84'> {last} Night</div></div>
                     
                      <div className='book85'>  
                         <div className='book86'><div className='book86a'><img src='Img/book2.svg'></img></div><div className='book86b'>Add a Room</div></div>
