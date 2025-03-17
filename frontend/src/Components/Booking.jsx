@@ -19,6 +19,7 @@ const Booking = ({pizza}) => {
       const[per , setper] = useState("")
       const[email , setemail] = useState("")
       const[phone , setphone] = useState("")
+        const [base, setbase] = useState("");
       
       if(per !== "" && email !== "" && phone !== ""){
         hidden.current.classList.add("dsrhtr")
@@ -64,6 +65,7 @@ const Booking = ({pizza}) => {
         settax(location.state.tax)
         settotal(location.state.total)
         setlast(location.state.last)
+        setbase(location.state.base)
       }
    },[])
   return (
@@ -125,7 +127,7 @@ const Booking = ({pizza}) => {
                     <div className='book81'>Your Stay</div>
                     <div className='book82'><div className='book83'>Date:</div><div className='book84'> {pizza.dateone} - {pizza.datetwo}</div></div>
                      <div className='book82'><div className='book83'>Guests: </div><div className='book84'>{pizza.adult} Adults - {pizza.child} Child</div></div>
-                     <div className='book82'><div className='book83'>Stay:</div><div className='book84'> {pizza.base}</div></div>
+                     <div className='book82'><div className='book83'>Stay:</div><div className='book84'> {pizza.roomR > 0 ? pizza.base : base}</div></div>
                      <div className='book82'><div className='book83'>Selected Room:</div><div className='book84'>{pizza.stay}</div></div>
                      <div className='book82'><div className='book83'>Duration of the Stay: </div><div className='book84'> {last} Night</div></div>
                     
