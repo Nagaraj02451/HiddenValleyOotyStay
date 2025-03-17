@@ -31,6 +31,8 @@ const Bprocess = ({
   const [first, setfirst] = useState("");
   const [second, setsecond] = useState("");
   const [last, setlast] = useState("");
+          const [base, setbase] = useState("TinyHouse");
+  
   //    const [room1, setroom1] = useState(6000);
   const increment = () => {
     setcount(count + 1);
@@ -91,7 +93,8 @@ settax(newTax)
 
   }
   const jghftuycv = () => {
-    navigate("/booking", { state: { room: room, tax: tax, total: total , last :last } });
+    navigate("/booking", { state: { room: room, tax: tax, total: total , last :last , base : base } });
+
 
     // console.log(room , tax , total , "iuyfygb");
     if(pizza.roomR !== 10){
@@ -106,6 +109,7 @@ settax(newTax)
     datetwo(pizza.datetwo);
     dateone(pizza.dateone);
     stay(pizza.stay);
+    roomR(pizza.roomR)
     setfirst(Number(pizza.dateone.slice(8, 10)));
     setsecond(Number(pizza.datetwo.slice(8, 10)));
     //  console.log(pizza.child);
