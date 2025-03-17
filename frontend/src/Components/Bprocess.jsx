@@ -28,9 +28,13 @@ const Bprocess = ({
   const [room1, setroom1] = useState("");
   const [datefirst, setDate] = useState(new Date());
   const [date1, setDate1] = useState(new Date());
+  const [first, setfirst] = useState("");
+  const [second, setsecond] = useState("");
+  const [last, setlast] = useState("");
   //    const [room1, setroom1] = useState(6000);
   const increment = () => {
     setcount(count + 1);
+    setsecond(Number(date1.toString().slice(8, 10)));
     adult(count + 1);
     if (count >= 3) {
       alert("Only 5 Members allowed");
@@ -62,18 +66,33 @@ const Bprocess = ({
     }
   };
   const firstroom = () => {
-    searchdfghn.current.classList.add("jhuyiuytg67y");
-    setroom(5600);
-    settax(500);
-    settotal(6100);
-    stay("2 Bedroom Chalet");
+    const datasin = second - first;
+    const newRoom = 5600 * datasin;
+    const newTax = 1000 * datasin;
+    const newTotal = newRoom + newTax;
+    setlast(second - first);
+    try {
+      searchdfghn.current.classList.add("jhuyiuytg67y");
+      setroom1("2 Bedroom Chalet");
+      stay("2 Bedroom Chalet");
+setroom(newRoom)
+settax(newTax)
+      // Update total once at the end, without conditions
+      settotal(newTotal);
+  } catch (error) {
+      console.error("Error occurred: ", error);
+  }
+  
+
   };
   const iugyfgu =()=>{
     dateone(datefirst.toString().slice(0, 15))
+    setfirst(Number(pizza.dateone.slice(8, 10)));
 
   }
   const jghftuycv = () => {
-    navigate("/booking", { state: { room: room, tax: tax, total: total } });
+    navigate("/booking", { state: { room: room, tax: tax, total: total , last :last } });
+
     // console.log(room , tax , total , "iuyfygb");
     if(pizza.roomR !== 10){
       datetwo(date1.toString().slice(0, 15))
@@ -87,7 +106,8 @@ const Bprocess = ({
     datetwo(pizza.datetwo);
     dateone(pizza.dateone);
     stay(pizza.stay);
-
+    setfirst(Number(pizza.dateone.slice(8, 10)));
+    setsecond(Number(pizza.datetwo.slice(8, 10)));
     //  console.log(pizza.child);
   }, []);
 
@@ -222,7 +242,7 @@ const Bprocess = ({
                   {/* <div className='book82'><div className='book83'>Selected Room:</div><div className='book84'>King Room with Forest View</div></div> */}
                   <div className="book82">
                     <div className="book83">Duration of the Stay: </div>
-                    <div className="book84"> 1 Night</div>
+                    <div className="book84"> {last}  Night</div>
                   </div>
 
                   <div className="book85">
