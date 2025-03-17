@@ -28,9 +28,12 @@ const NethraBooking = ({
   const [room1, setroom1] = useState("");
     const [datefirst, setDate] = useState(new Date());
     const [date1, setDate1] = useState(new Date());
-
+  const [first, setfirst] = useState("");
+  const [second, setsecond] = useState("");
+  const [last, setlast] = useState("");
     const increment = () => {
      setcount(count + 1);
+    setsecond(Number(date1.toString().slice(8, 10)));
      adult(count + 1);
      if (count >= 3) {
        alert("Only 5 Members allowed");
@@ -63,31 +66,66 @@ const NethraBooking = ({
    };
 
   const firstroom = () => {
-    searchdfghn.current.classList.add("jhuyiuytg67y");
-    setroom1("Glasshouse");
-    setroom(5200);
-    settax(500);
-    settotal(5700);
-    stay("Glasshouse");
+    const datasin = second - first;
+    const newRoom = 5200 * datasin;
+    const newTax = 1000 * datasin;
+    const newTotal = newRoom + newTax;
+    setlast(second - first);
+    try {
+      searchdfghn.current.classList.add("jhuyiuytg67y");
+      setroom1("Glasshouse");
+      stay("Glasshouse");
+setroom(newRoom)
+settax(newTax)
+      // Update total once at the end, without conditions
+      settotal(newTotal);
+  } catch (error) {
+      console.error("Error occurred: ", error);
+  }
+   
   };
   const secondroom = () => {
-    searchdfghn.current.classList.add("jhuyiuytg67y");
-    setroom1("Ground Floor Room");
-    setroom(2500);
-    settax(250);
-    settotal(2750);
-    stay("Ground Floor Room");
+    const datasin = second - first;
+    const newRoom = 5200 * datasin;
+    const newTax = 1000 * datasin;
+    const newTotal = newRoom + newTax;
+    setlast(second - first);
+    try {
+      searchdfghn.current.classList.add("jhuyiuytg67y");
+      setroom1("Ground Floor Room");
+      stay("Ground Floor Room");
+setroom(newRoom)
+settax(newTax)
+      // Update total once at the end, without conditions
+      settotal(newTotal);
+  } catch (error) {
+      console.error("Error occurred: ", error);
+  }
+    
+
   };
   const thirdroom = () => {
-    searchdfghn.current.classList.add("jhuyiuytg67y");
-    setroom1("COTTAGE");
-    setroom(2500);
-    settax(250);
-    settotal(2750);
-    stay("COTTAGE");
+    const datasin = second - first;
+    const newRoom = 2500 * datasin;
+    const newTax = 250 * datasin;
+    const newTotal = newRoom + newTax;
+    setlast(second - first);
+    try {
+      searchdfghn.current.classList.add("jhuyiuytg67y");
+      setroom1("COTTAGE");
+      stay("COTTAGE");
+setroom(newRoom)
+settax(newTax)
+      // Update total once at the end, without conditions
+      settotal(newTotal);
+  } catch (error) {
+      console.error("Error occurred: ", error);
+  }
+  
   };
   const iugyfgu =()=>{
      dateone(datefirst.toString().slice(0, 15))
+     setfirst(Number(pizza.dateone.slice(8, 10)));
  
    }
   const jghftuycv = () => {
@@ -105,6 +143,8 @@ const NethraBooking = ({
     datetwo(pizza.datetwo);
     dateone(pizza.dateone);
     stay(pizza.stay);
+    setfirst(Number(pizza.dateone.slice(8, 10)));
+    setsecond(Number(pizza.datetwo.slice(8, 10)));
 
     //  console.log(pizza.child);
   }, []);
@@ -310,7 +350,7 @@ const NethraBooking = ({
                   {/* <div className='book82'><div className='book83'>Selected Room:</div><div className='book84'>King Room with Forest View</div></div> */}
                   <div className="book82">
                     <div className="book83">Duration of the Stay: </div>
-                    <div className="book84"> 1 Night</div>
+                    <div className="book84"> {last} Night</div>
                   </div>
 
                   <div className="book85">
