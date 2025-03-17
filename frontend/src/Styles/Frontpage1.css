@@ -211,10 +211,14 @@ text-align: center;
 .jhgfuyv{
     font-size: 1vw;
 }
+
 @media(max-width:600px){
     .fr1{
    display: none;
 
+    }
+    .jhgfuyv{
+        font-size: 14px;
     }
     .mf1{
         display: block;
