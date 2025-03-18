@@ -286,7 +286,9 @@
 }
 .iuhgfyuyt6{
     font-weight: 600;
-    color: red;
+    color: #B0714E;
+    /* position: absolute; */
+    text-decoration: underline;
     font-size: 1.1vw;
     line-height: 1.1vw;
     font-family:axi400;
