@@ -248,23 +248,32 @@ settax(newTax)
 
                   <div className="book82">
                     <div className="book83">Guests: </div>
-                    <div className="book84">
-                      <span className="uytfdr5rtfdyt" onClick={decrement}>
-                        -
-                      </span>
-                      {pizza.adult} Adults{" "}
-                      <span className="uytfdr5rtfdyt" onClick={increment}>
-                        +
-                      </span>{" "}
-                      -{" "}
-                      <span onClick={decrement1} className="uytfdr5rtfdyt">
-                        -
-                      </span>
-                      {pizza.child} Child{" "}
-                      <span className="uytfdr5rtfdyt" onClick={increment1}>
-                        +
-                      </span>
-                    </div>
+                   {
+                    pizza.roomR === 10 ?  <div className="book84">
+               
+                    {pizza.adult} Adults{" "}
+                 
+                    {pizza.child} Child
+                  
+                  </div> :
+                   <div className="book84">
+                   <span className="uytfdr5rtfdyt" onClick={decrement}>
+                     -
+                   </span>
+                   {pizza.adult} Adults{" "}
+                   <span className="uytfdr5rtfdyt" onClick={increment}>
+                     +
+                   </span>{" "}
+                   -{" "}
+                   <span onClick={decrement1} className="uytfdr5rtfdyt">
+                     -
+                   </span>
+                   {pizza.child} Child{" "}
+                   <span className="uytfdr5rtfdyt" onClick={increment1}>
+                     +
+                   </span>
+                 </div>
+                   }
                   </div>
 
                   <div className="book82">
