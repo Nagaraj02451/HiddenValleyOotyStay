@@ -53,30 +53,35 @@ const Contact = () => {
                         <div className='cnt32'>CONTACT US</div>
 
                         <div className='jyfu6ty' id='khgfhj'>
-                           <a href="tel:+9611588968" > <div className='jhcgvkuy'><div > <span className='hjcgg'>Call :</span> </div> +91 9611588968/ +91 6362757985</div></a>
+                         <div>
+                         <a href="tel:+9611588968" > <div className='jhcgvkuy'><div > <span className='hjcgg'>Call : </span> </div> +91 9611588968/ +91 6362757985</div></a>
+                            <p ><span className='hjcgg'>Registered Address:</span>   Hidden Valley Estates,<br /> 932 B, GROUND FLOOR, 1ST MAIN, B BLOCK,<br /> AECS LAYOUT,
+                            SINGASANDRA BANGALORE -<br /> 560068.</p>
+                             
+                         </div>
                            <div>
                            <a href="mailto:hello@hiddenvalleystays.com" ><div className='jhcgvkuy'>
                            <div><span className='hjcgg'>For Enquiry :</span>  </div> hello@hiddenvalleystays.com</div></a>
                            <a href="mailto:reservation@hiddenvalleystays.com" ><div className='jhcgvkuy'>
                            <div><span className='hjcgg'>For Reservations: </span>  </div>reservation@hiddenvalleystays.com</div></a>
                            </div>
-                            <a><div className='jhcgvkuy'><div><span className='hjcgg'>Address :</span> </div> Coorg, Karnataka</div></a>
                         </div>
 
                         <div className='jyfu6ty' id='hhgj'>
                         <div className='hjcgg'>Call </div>
-                           <a href="tel:+9611588968" > <div className='jhcgvkuy'> +91 9611588968/ +91 6362757985</div></a>
+                           <a href="tel:+9611588968" > <div > +91 9611588968/ +91 6362757985</div></a>
                            <div>
                            <div className='hjcgg'>For Enquiry </div> 
-                           <a href="mailto:hello@hiddenvalleystays.com" ><div className='jhcgvkuy'>
-                           <div> </div> hello@hiddenvalleystays.com</div></a>
+                           <a href="mailto:hello@hiddenvalleystays.com" ><div >
+                            hello@hiddenvalleystays.com</div></a>
                            <div className='hjcgg'>For Reservations: </div>
 
-                           <a href="mailto:reservation@hiddenvalleystays.com" ><div className='jhcgvkuy'>
-                           <div>  </div>reservation@hiddenvalleystays.com</div></a>
+                           <a href="mailto:reservation@hiddenvalleystays.com" ><div >
+                           reservation@hiddenvalleystays.com</div></a>
                            </div>
-                           <div className='hjcgg'>Address</div>
-                            <a><div className='jhcgvkuy'><div> </div> Coorg, Karnataka</div></a>
+                           <div className='hjcgg'>Registered Address</div>
+                            <a><div className='jhcgvkuy'> Hidden Valley Estates, 932 B, GROUND FLOOR, 1ST MAIN, B BLOCK, AECS LAYOUT,
+                            SINGASANDRA BANGALORE - 560068.</div></a>
                         </div>
                         </div>
 
@@ -112,7 +117,7 @@ const Contact = () => {
                             </div>
                             <div className='cnt42'>
                                 <div className='cnt42a'>Follow us on</div>
-                                <div className='cnt42b'><img src='Img/insta1.svg'></img></div>
+                                <div className='cnt42b'><a href='https://www.instagram.com/hiddenvalleystays?igsh=ZmNybzJwa2psYnJh'><img src='Img/insta1.svg'></img></a></div>
                             </div>
                         </div>
 
