@@ -45,19 +45,16 @@
   .foot3{
     width: 60%;
    display: flex;
+   column-gap: 3.5%;
+   color: #FFF2E2;
    justify-content: end;
     /* border: 1px solid rgb(0, 255, 55); */
   }
-  .foot3a{
+  .foot13ab a{
     color: #FFF2E2;
-    font-size: 0.9vw;
-    line-height: 0.9vw;
-    font-weight: 400;
-    font-family:axi400;
-
   }
-  
  @media (max-width:756px) {
+  
   .foot2a{
     font-size: 14px;
     line-height: 14px;
