@@ -52,7 +52,7 @@ const Contact = () => {
                         {/* <div className='cnt31' >Semper vitae sit pretium nisl</div> */}
                         <div className='cnt32'>CONTACT US</div>
 
-                        <div className='jyfu6ty'>
+                        <div className='jyfu6ty' id='khgfhj'>
                            <a href="tel:+9611588968" > <div className='jhcgvkuy'><div > <span className='hjcgg'>Call :</span> </div> +91 9611588968/ +91 6362757985</div></a>
                            <div>
                            <a href="mailto:hello@hiddenvalleystays.com" ><div className='jhcgvkuy'>
@@ -61,6 +61,22 @@ const Contact = () => {
                            <div><span className='hjcgg'>For Reservations: </span>  </div>reservation@hiddenvalleystays.com</div></a>
                            </div>
                             <a><div className='jhcgvkuy'><div><span className='hjcgg'>Address :</span> </div> Coorg, Karnataka</div></a>
+                        </div>
+
+                        <div className='jyfu6ty' id='hhgj'>
+                        <div className='hjcgg'>Call </div>
+                           <a href="tel:+9611588968" > <div className='jhcgvkuy'> +91 9611588968/ +91 6362757985</div></a>
+                           <div>
+                           <div className='hjcgg'>For Enquiry </div> 
+                           <a href="mailto:hello@hiddenvalleystays.com" ><div className='jhcgvkuy'>
+                           <div> </div> hello@hiddenvalleystays.com</div></a>
+                           <div className='hjcgg'>For Reservations: </div>
+
+                           <a href="mailto:reservation@hiddenvalleystays.com" ><div className='jhcgvkuy'>
+                           <div>  </div>reservation@hiddenvalleystays.com</div></a>
+                           </div>
+                           <div className='hjcgg'>Address</div>
+                            <a><div className='jhcgvkuy'><div> </div> Coorg, Karnataka</div></a>
                         </div>
                         </div>
 
@@ -72,9 +88,9 @@ const Contact = () => {
                             <div className='cnt41'>
                                 <div className='cnt41a'>Get in touch!</div>
                                 <div className='cnt41b'>Alternatively, you can fill out this form and we will get back
-                                    <br /> to you at the earliest.</div>
+                                     <br />to you at the earliest.</div>
                                 <div className='cnt41bb'>Alternatively, you can fill out this form and we will get back
-                                <br /> to you at the earliest.</div>
+                                 to you at the earliest.</div>
 
                                 <div className='cnt41c' >
                                     <div className='cnt41d' ><input type='text' value={name} onChange={(e) => setname(e.target.value)} placeholder='Name'></input></div>
