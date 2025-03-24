@@ -36,12 +36,16 @@
       font-family:axi400;
   
     }
-    .foot13{
+    .foot3{
       width: 60%;
      display: flex;
+     column-gap: 3.5%;
+     color: #FFF2E2;
      justify-content: end;
+      /* border: 1px solid rgb(0, 255, 55); */
     }
-    .foot13a{
+    
+    .foot3a{
       color: #1E1E1E;
       font-size: 0.9vw;
       line-height: 0.9vw;
@@ -49,10 +53,44 @@
       font-family:axi400;
   
     }
+    .foot3a a{
+      color: #1E1E1E;
+    }
+    .foot13{
+      width: 60%;
+     display: flex;
+     justify-content: end;
+    }
+    .foot13a{
+      /* color: red; */
+      /* border: 1px solid red; */
+      font-size: 0.9vw;
+      line-height: 0.9vw;
+      font-weight: 400;
+      font-family:axi400;
+  
+    }
     @media(max-width:600px){
+      .foot3{
+        width: 100%;
+      }
       .foot00{
         border: none;
         outline: none;
+
+      }
+      .foot3{
+        margin-top: 6%;
+        display: inline;
+        padding-bottom: 8vw;
+        /* margin-bottom: 5%; */
+      }
+      
+      .foot3a{
+
+        margin-top: 2%;
+        font-size: 14px;
+line-height: 14px;
       }
       .foot11{
         height: 100%;
