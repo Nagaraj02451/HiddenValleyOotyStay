@@ -16,8 +16,9 @@ const Footer2 = () => {
        </div>
        
 
-       <div className='foot13'>
-          <div className='foot13a'>Designed & Developed by New Tab Tech Lab</div>
+       <div className='foot3'>
+          <div className='foot3a'>©2025 Hidden valley Estates</div>
+          <div className='foot3a'><a href='https://newtabtechlab.in/'>Designed & Developed by New Tab Tech Lab</a></div>
        </div>
 
     </div>
