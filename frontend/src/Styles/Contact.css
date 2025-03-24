@@ -11,6 +11,7 @@
     justify-content: space-between;
     margin-bottom: 2%;
 }
+
 .newcontentsupport{
     width: 75%;
     margin-left: auto;
@@ -131,6 +132,7 @@
 }
 .hjcgg{
     font-family: axi500;
+    /* border: 1px solid red; */
 
 }
 .cnt41b{
@@ -231,7 +233,13 @@
 .cnt41bb{
     display: none;
 }
+#hhgj{
+    display: none;
+}
 @media(max-width:600px){
+    #hhgj{
+        display: block;
+    }
     .cnt3{
         /* border: 1px solid red; */
         margin-top: 10%;
@@ -288,6 +296,9 @@
         /* border: 2px solid red; */
         /* text-align: end; */
     }
+    #khgfhj{
+    display: none;
+    }
     .cnt35a{
         width: 120px;
         height: 30px;
@@ -338,6 +349,15 @@
         font-weight: 400;
         margin-top: 5%;
         
+    }
+    .hjcgg{
+        text-align: center;
+        font-family: axi500;
+        margin-top: 5vw;
+        /* margin: 1.5vw ; */
+        /* padding: 1.5vw 1.5vw; */
+        /* border: 1px solid red; */
+    
     }
     .cnt41c{
         margin-top: 5%;
