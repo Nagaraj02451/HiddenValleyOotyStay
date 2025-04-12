@@ -23,6 +23,8 @@ import NethraBooking from './Components/NethraBooking';
 import Privacy from './Components/Privacy';
 import Terms from './Components/Terms';
 import Refund from './Components/Refund';
+import Success from './Components/Success/Success';
+// import Refund from './Components/Success/Success';
 // import { ToastContainer } from "react-toastify";
 
 
@@ -72,6 +74,7 @@ const Pages = () => {
        <Route path='/navbar2' element={<Navbar2/>}></Route>
        <Route path='/footer1' element={<Footer1/>}></Route>
        <Route path='/footer2' element={<Footer2/>}></Route>
+       <Route path='/success' element={<Success />}></Route>
 
        <Route path='/' element={<Frontpage1  addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} roomR={roomR} />}></Route>  
        <Route path='/hinyhouse' element={<Ourstays roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
