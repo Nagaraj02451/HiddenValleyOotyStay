@@ -7,9 +7,12 @@ import axios from "axios"
 import {useLocation, useNavigate ,Link} from 'react-router-dom'
 
 const Booking = ({pizza}) => {
+    // const location = useLocation();
+    const navigate = useNavigate()
              const hidden = useRef();
              console.log(pizza.datetwo , "uggyft");
              
+  const [loading, setLoading] = useState(false);
     
       const location = useLocation();
       const[room , setroom] = useState("")
@@ -25,38 +28,107 @@ const Booking = ({pizza}) => {
         hidden.current.classList.add("dsrhtr")
            
       }
-      const bookingdatas = async () => {
-        // alert("df")
-        try {
-            if (email) {
-                alert("Booking details has been received successfully. Our team will contact you soon!!!")
 
-                const result = await axios.post("/api/v1/booking", {
-                    name : per,
-                    email: email,
-                    phone : phone,
-                    room:room,
-                    tax:tax,
-                    total:total,
-                    date : pizza.dateone,
-                    date2 :pizza.datetwo,
-                    adult:pizza.adult,
-                    child:pizza.child,
-                    stay:pizza.base,
-                    selectedroom:pizza.stay,
+      function loadRazorpay() {
+        const script = document.createElement('script');
+        script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+        script.onerror = () => {
+          alert('Razorpay SDK failed to load. Are you online?');
+        };
+        script.onload = async () => {
+          try {
+            const result = await axios.post("/api/v1/create-order", {
+              amount: total + '00',
+            });
+            const { amount, id: order_id, currency } = result.data;
+            const {
+              data: { key: razorpayKey },
+            } = await axios.get("/api/v1/get-razorpay-key");
+            const options = {
+              key: razorpayKey,
+              amount: amount.toString(),
+              currency: currency,
+              name: 'example name',
+              description: 'example transaction',
+              order_id: order_id,
+              handler: async function (response) {
+                const result = await axios.post("/api/v1/pay-order", {
+                  amount: total,
+                  razorpayPaymentId: response.razorpay_payment_id,
+                  razorpayOrderId: response.razorpay_order_id,
+                  razorpaySignature: response.razorpay_signature,
+                  name : per,
+                  email: email,
+                  phone : phone,
+                  room:room,
+                  tax:tax,
+                  total:total,
+                  date : pizza.dateone,
+                  date2 :pizza.datetwo,
+                  adult:pizza.adult,
+                  child:pizza.child,
+                  stay:pizza.base,
+                  selectedroom:pizza.stay,
+              
+                });
+                // alert(result.data.msg);
+                navigate("/success")
+              },
+              prefill: {
+                name: 'example name',
+                email: 'email@example.com',
+                contact: '111111',
+              },
+              notes: {
+                address: 'example address',
+              },
+              theme: {
+                color: '#80c0f0',
+              },
+            };
+    
+            setLoading(false);
+            const paymentObject = new window.Razorpay(options);
+            paymentObject.open();
+          } catch (err) {
+            alert(err);
+            setLoading(false);
+          }
+        };
+        document.body.appendChild(script);
+      }
+    //   const bookingdatas = async () => {
+    //     // alert("df")
+    //     try {
+    //         if (email) {
+    //             alert("Booking details has been received successfully. Our team will contact you soon!!!")
+
+    //             const result = await axios.post("/api/v1/booking", {
+    //                 name : per,
+    //                 email: email,
+    //                 phone : phone,
+    //                 room:room,
+    //                 tax:tax,
+    //                 total:total,
+    //                 date : pizza.dateone,
+    //                 date2 :pizza.datetwo,
+    //                 adult:pizza.adult,
+    //                 child:pizza.child,
+    //                 stay:pizza.base,
+    //                 selectedroom:pizza.stay,
 
                     
-                });
-                alert("Your details has been received successfully")
+    //             });
+    //             alert("Your details has been received successfully")
               
-            } else {
-                alert("Please fill all details")
+    //         } else {
+    //             alert("Please fill all details")
 
-            }
-        } catch (error) {
-            console.log(error.message);
-        }
-    };
+    //         }
+    //     } catch (error) {
+    //         console.log(error.message);
+    //     }
+    // };
     
    useEffect(()=>{
     if (location.state !== null) {
@@ -146,7 +218,7 @@ const Booking = ({pizza}) => {
 
                          
                   <div className='book9' ref={hidden}>
-                        <button onClick={bookingdatas} className='book91'>Book Now</button>
+                        <button onClick={loadRazorpay} className='book91'>Book Now</button>
                    </div>
                      
                 </div>
