@@ -1,25 +1,71 @@
+const Booking = require('../models/booking');
 const catchAsyncError = require('../middlewares/catchAsyncError');
 const nodemailer = require("nodemailer");
+const Razorpay = require('razorpay');
+
+
+// app.get('/get-razorpay-key', (req, res) => {
+//   res.send({ key: process.env.RAZORPAY_KEY_ID });
+// });
+
+exports.keyrazorpay = catchAsyncError(async (req, res, next)=>{
+  res.send({ key: process.env.RAZORPAY_KEY_ID });
+})
+
+exports.createbooking = catchAsyncError(async(req, res, next)=>{
+  try {
+    const instance = new Razorpay({
+      key_id: process.env.RAZORPAY_KEY_ID,
+      key_secret: process.env.RAZORPAY_SECRET,
+    });
+    const options = {
+      amount: req.body.amount,
+      currency: 'INR',
+    };
+    const order = await instance.orders.create(options);
+    if (!order) return res.status(500).send('Some error occured');
+    res.send(order);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+})
 
 //Register User - /api/v1/register
 exports.booking = catchAsyncError(async (req, res, next) => {
+  const {email, name, phone, room, tax, total, date, date2, adult, child, stay, selectedroom, amount, razorpayOrderId, razorpayPaymentId, razorpaySignature} = req.body;
   
-        const {email} = req.body
-        const {name} = req.body
-        const {phone} = req.body
-        const {room} = req.body
-        const {tax} = req.body
-        const {total} = req.body
-        const {date} = req.body
-        const {date2} = req.body
-        const {adult} = req.body
-        const {child} = req.body
-        const {stay} = req.body
-        const {selectedroom} = req.body
-    // console.log(email,password , "bunbuhb");
-    if(email){
+  try {
+    const newBooking = new Booking({
+      isPaid: true,
+      amount: amount,
+      razorpay: {
+        orderId: razorpayOrderId,
+        paymentId: razorpayPaymentId,
+        signature: razorpaySignature,
+      },
+      name,
+      email,
+      phone,
+      room,
+      tax,
+      total,
+      date,
+      date2,
+      adult,
+      child,
+      stay,
+      selectedroom
+    });
+
+    await newBooking.save();
     
-    const transporter = nodemailer.createTransport({
+    res.send({
+      msg: 'Payment was successful'
+    });
+
+    // Send email
+    if(email) {
+      const transporter = nodemailer.createTransport({
          host: "smtppro.zoho.in",
          port: 465,
          secure: true,
@@ -34,7 +80,8 @@ exports.booking = catchAsyncError(async (req, res, next) => {
            rejectUnauthorized: true
          }
        });
-       const mailOptions = {
+
+      const mailOptions = {
          from: process.env.MAILZOHOBOOKING,
          to: email,
          subject: "Boooking - HiddenValleyStay",
@@ -60,23 +107,20 @@ exports.booking = catchAsyncError(async (req, res, next) => {
         
           `
        };
-   
-       // Send email
-       transporter.sendMail(mailOptions, (error, info) => {
-         if (error) {
-           console.error("Error sending email:", error);
-         } else {
-           console.log("Email sent successfully:", info.response);
-         }
-       });
-   
-   
-     }
-     
- 
-      
-   
 
-})
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.error("Error sending email:", error);
+        } else {
+          console.log("Email sent successfully:", info.response);
+        }
+      });
+    }
+
+  } catch (error) {
+    console.log(error);
+    res.status(500).send(error);
+  }
+});
 
 
