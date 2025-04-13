@@ -18,7 +18,7 @@ function Success() {
     </div>
   <div className='paoo mt-5'>Payment Was Successful</div>
   <div className='oplop d-flex justify-content-center  mt-4'>Your Booking is Confirm......</div>
- <a href="/home"> <div className='koppo d-flex justify-content-center mt-4'>Redirecting to Home Page</div></a>
+ <a href="/"> <div className='koppo d-flex justify-content-center mt-4'>Redirecting to Home Page</div></a>
 </div>
 </div>
     <Footer2 />
