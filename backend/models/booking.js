@@ -55,7 +55,7 @@ const bookingSchema = new mongoose.Schema({
     required: true
   },
   stay: {
-    type: Number,
+    type: String,
     required: true
   },
   selectedroom: {
