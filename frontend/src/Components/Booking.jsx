@@ -75,12 +75,12 @@ const Booking = ({pizza}) => {
                 navigate("/success")
               },
               prefill: {
-                name: 'example name',
-                email: 'email@example.com',
-                contact: '111111',
+                name: 'HiddenValleyStays',
+                email: 'files.hiddenvalleystays@gmail.com',
+                contact: '9080910971',
               },
               notes: {
-                address: 'example address',
+                address: 'Hiddenvalleystays',
               },
               theme: {
                 color: '#80c0f0',
