@@ -126,8 +126,8 @@ settax(newTax)
   };
   const fouthroom = () => {
     const datasin = second - first;
-    const newRoom = 3000 * datasin;
-    const newTax = 300 * datasin;
+    const newRoom = 1 * datasin;
+    const newTax = 1 * datasin;
     const newTotal = newRoom + newTax;
     setlast(second - first);
     try {
