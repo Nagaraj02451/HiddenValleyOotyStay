@@ -48,8 +48,8 @@ const Booking = ({pizza}) => {
               key: razorpayKey,
               amount: amount.toString(),
               currency: currency,
-              name: 'example name',
-              description: 'example transaction',
+              name: 'HiddenValleyStays',
+              description: 'HiddenValleyStays transaction',
               order_id: order_id,
               handler: async function (response) {
                 const result = await axios.post("/api/v1/pay-order", {
