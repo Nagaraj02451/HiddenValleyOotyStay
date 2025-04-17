@@ -71,7 +71,7 @@ const SunsetcottageBooking = ({
   const firstroom = () => {
     const datasin = second - first;
     const newRoom = 3500 * datasin;
-    const newTax = 500 * datasin;
+    const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
     try {
@@ -89,7 +89,7 @@ settax(newTax)
   const secondroom = () => {
     const datasin = second - first;
     const newRoom = 3500 * datasin;
-    const newTax = 500 * datasin;
+    const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
     try {
