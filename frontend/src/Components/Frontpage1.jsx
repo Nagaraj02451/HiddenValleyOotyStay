@@ -136,6 +136,7 @@ const Frontpage1 = ({
                       id="uytr7iy"
                       placeholderText="CHECK IN"
                       selected={datefirst}
+                      dateFormat="dd/MM/YYYY" 
                       onChange={(datefirst) => setDate(datefirst)}
                     />
                     {/* <input type='text' placeholder='CHECK OUT' /> */}
@@ -148,6 +149,7 @@ const Frontpage1 = ({
                       id="uytr7iy"
                       placeholderText="CHECK OUT"
                       selected={date1}
+                      dateFormat="dd/MM/YYYY" 
                       onChange={(date) => setDate1(date)}
                     />
                     {/* <input type='text' placeholder='CHECK OUT' /> */}
@@ -238,6 +240,7 @@ const Frontpage1 = ({
                       id="uytr7iy"
                       placeholderText="CHECK IN"
                       className="jufgtubook84"
+                      dateFormat="dd/MM/YYYY" 
                       selected={datefirst}
                       onChange={(datefirst) => setDate(datefirst)}
                     />
@@ -252,6 +255,7 @@ const Frontpage1 = ({
                       placeholderText="CHECK OUT"
                       className="jufgtubook84"
                       selected={date1}
+                      dateFormat="dd/MM/YYYY" 
                       onChange={(date) => setDate1(date)}
                     />
 
