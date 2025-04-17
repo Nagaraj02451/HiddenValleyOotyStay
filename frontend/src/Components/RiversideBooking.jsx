@@ -68,7 +68,7 @@ const RiversideBooking = ({
   const firstroom = () => {
     const datasin = second - first;
     const newRoom = 4800 * datasin;
-    const newTax = 800 * datasin;
+    const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
     try {
@@ -88,7 +88,7 @@ settax(newTax)
   const secondroom = () => {
     const datasin = second - first;
     const newRoom = 4800 * datasin;
-    const newTax = 800 * datasin;
+    const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
     try {
@@ -107,7 +107,7 @@ settax(newTax)
   const thirdroom = () => {
     const datasin = second - first;
     const newRoom = 3000 * datasin;
-    const newTax = 300 * datasin;
+    const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
     try {
@@ -126,8 +126,8 @@ settax(newTax)
   };
   const fouthroom = () => {
     const datasin = second - first;
-    const newRoom = 1 * datasin;
-    const newTax = 1 * datasin;
+    const newRoom = 3000 * datasin;
+    const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
     try {
