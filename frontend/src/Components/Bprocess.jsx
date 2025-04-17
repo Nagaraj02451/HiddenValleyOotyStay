@@ -70,7 +70,7 @@ const Bprocess = ({
   const firstroom = () => {
     const datasin = second - first;
     const newRoom = 5600 * datasin;
-    const newTax = 1000 * datasin;
+    const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
     try {
