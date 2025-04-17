@@ -129,7 +129,29 @@ const Booking = ({pizza}) => {
     //         console.log(error.message);
     //     }
     // };
-    
+// alert(pizza.base)
+const jhgfxhj =()=>{
+  switch (pizza.base) {
+    case (pizza.base && "SUNSET COTTAGE"):
+      navigate("/sunsetcottageBooking")
+      break;
+    case (pizza.base && "SUNSET VALLEY VILLA"):
+      navigate("/sunsetVillaBooking")
+      break;
+    case (pizza.base && "RIVERSIDE"):
+      navigate("/RiversideBooking")
+      break;
+    case (pizza.base && "NETHRA"):
+      navigate("/nethraBooking")
+      break;
+    case (pizza.base && "TINYHOUSE"):
+      navigate("/tinyhouseBooking")
+      break;
+  
+    default:
+      break;
+  }
+}
    useEffect(()=>{
     if (location.state !== null) {
         // alert("hjb")
@@ -147,7 +169,13 @@ const Booking = ({pizza}) => {
     <Navbar1/>
 
         <div className='book2'>  
-            <div  className='book21'><img src='Img/book1.svg' ></img><div  className='book22'>Room Details</div></div>
+            <div  className='book21'>
+             
+              <img src='Img/book1.svg' onClick={jhgfxhj} ></img> 
+              
+          
+            
+            <div  className='book22'>Room Details</div></div>
 
             <div  className='book3'>
                 <div  className='book4'>
