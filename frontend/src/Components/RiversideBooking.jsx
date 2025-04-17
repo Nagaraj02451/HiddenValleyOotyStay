@@ -425,12 +425,7 @@ settax(newTax)
                   </div>
 
                   <div className="book85">
-                    <div className="book86">
-                      <div className="book86a">
-                        <img src="Img/book2.svg"></img>
-                      </div>
-                      <div className="book86b">Add a Room</div>
-                    </div>
+               
                     <hr className="bookhr1"></hr>
                     <div className="book87">
                       <div className="book87a">Room's Charge</div>
