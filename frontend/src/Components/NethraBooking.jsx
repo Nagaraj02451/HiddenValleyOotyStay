@@ -70,7 +70,7 @@ const NethraBooking = ({
   const firstroom = () => {
     const datasin = second - first;
     const newRoom = 5200 * datasin;
-    const newTax = 1000 * datasin;
+    const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
     try {
@@ -88,8 +88,8 @@ settax(newTax)
   };
   const secondroom = () => {
     const datasin = second - first;
-    const newRoom = 5200 * datasin;
-    const newTax = 1000 * datasin;
+    const newRoom = 2500 * datasin;
+    const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
     try {
@@ -109,7 +109,7 @@ settax(newTax)
   const thirdroom = () => {
     const datasin = second - first;
     const newRoom = 2500 * datasin;
-    const newTax = 250 * datasin;
+    const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
     try {
