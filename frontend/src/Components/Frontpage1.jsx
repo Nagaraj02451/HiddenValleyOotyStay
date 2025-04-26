@@ -93,6 +93,9 @@ const Frontpage1 = ({
     } else if (delivery === "TINYHOUSE") {
       navigate("/hinyhouse");
     }
+    else{
+      alert("Please fill the details.....")
+    }
   };
   return (
     <>
