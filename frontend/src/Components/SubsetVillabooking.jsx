@@ -69,8 +69,11 @@ const SubsetVillabooking = ({
     }
   };
   const firstroom = () => {
-    const datasin = second - first;
-    const newRoom = 3500 * datasin;
+    const datasin = pizza.roomR === 10  ? pizza.adult + pizza.child : count + count1;
+    const datejioij = pizza.roomR === 10 ? Number(pizza.datetwo.slice(8, 10)) - Number(pizza.dateone.slice(8, 10)) : (second - first)
+    const datainday = datasin * datejioij
+
+    const newRoom = 2199 * datainday;
     const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
@@ -90,8 +93,11 @@ settax(newTax)
   };
 
   const secondroom = () => {
-    const datasin = second - first;
-    const newRoom = 3500 * datasin;
+    const datasin = pizza.roomR === 10  ? pizza.adult + pizza.child : count + count1;
+    const datejioij = pizza.roomR === 10 ? Number(pizza.datetwo.slice(8, 10)) - Number(pizza.dateone.slice(8, 10)) : (second - first)
+    const datainday = datasin * datejioij
+
+    const newRoom = 2199 * datainday;
     const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
@@ -154,14 +160,14 @@ settax(newTax)
                       <div>
                         <div className="bpro52a">Type 1</div>
                         <div className="bpro52b">
-                          3 Chalets | 2 bedrooms per chalets{" "}
+                         4 Rooms | 2 Ground Floor{" "}
                         </div>
                       </div>
                       <div className="uytghfyvj">
                         <div>
-                          <div className="bpro52g">Starting From 3500</div>
+                          <div className="bpro52g">Starting From 2199</div>
                           <div className="bpro52b">
-                            Per night | Excluding Taxes & Fees
+                          Per night | Per Person | Excluding Taxes & Fees
                           </div>
                         </div>
                       </div>
@@ -181,14 +187,14 @@ settax(newTax)
                       <div>
                         <div className="bpro52a">Type 2</div>
                         <div className="bpro52b">
-                          1 Chalets | 1 Living Room | 2 Bedrooms{" "}
+                        4 Rooms | 2 Ground Floor{" "}
                         </div>
                       </div>
                       <div className="uytghfyvj">
                         <div>
-                          <div className="bpro52g">Starting From 3500</div>
+                          <div className="bpro52g">Starting From 2199</div>
                           <div className="bpro52b">
-                            Per night | Excluding Taxes & Fees
+                          Per night | Per Person | Excluding Taxes & Fees
                           </div>
                         </div>
                       </div>
