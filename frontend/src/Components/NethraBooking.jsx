@@ -19,6 +19,8 @@ const NethraBooking = ({
   totalR,
 }) => {
   const searchdfghn = useRef();
+    // console.log(adult , child,"datasininin");
+
   const navigate = useNavigate();
   const [count, setcount] = useState(0);
   const [count1, setcount1] = useState(0);
@@ -68,8 +70,13 @@ const NethraBooking = ({
    };
 
   const firstroom = () => {
-    const datasin = second - first;
-    const newRoom = 5200 * datasin;
+    const datasin = pizza.roomR === 10  ? pizza.adult + pizza.child : count + count1;
+    const datejioij = pizza.roomR === 10 ? Number(pizza.datetwo.slice(8, 10)) - Number(pizza.dateone.slice(8, 10)) : (second - first)
+    const datainday = datasin * datejioij
+
+    // console.log(datainday,"datasininin");
+
+    const newRoom = 1499 * datainday;
     const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
@@ -87,8 +94,11 @@ settax(newTax)
    
   };
   const secondroom = () => {
-    const datasin = second - first;
-    const newRoom = 2500 * datasin;
+    const datasin = pizza.roomR === 10  ? pizza.adult + pizza.child : count + count1;
+    const datejioij = pizza.roomR === 10 ? Number(pizza.datetwo.slice(8, 10)) - Number(pizza.dateone.slice(8, 10)) : (second - first)
+    const datainday = datasin * datejioij
+
+    const newRoom = 2500 * datainday;
     const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
@@ -107,8 +117,11 @@ settax(newTax)
 
   };
   const thirdroom = () => {
-    const datasin = second - first;
-    const newRoom = 2500 * datasin;
+    const datasin = pizza.roomR === 10  ? pizza.adult + pizza.child : count + count1;
+    const datejioij = pizza.roomR === 10 ? Number(pizza.datetwo.slice(8, 10)) - Number(pizza.dateone.slice(8, 10)) : (second - first)
+    const datainday = datasin * datejioij
+
+    const newRoom = 2500 * datainday;
     const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
@@ -176,9 +189,9 @@ settax(newTax)
                       </div>
                       <div className="uytghfyvj">
                         <div>
-                          <div className="bpro52g">Starting From 5200</div>
+                          <div className="bpro52g">Starting From 1499</div>
                           <div className="bpro52b">
-                            Per night | Excluding Taxes & Fees
+                          Per night | Per Person | Excluding Taxes & Fees
                           </div>
                         </div>
                       </div>
@@ -213,7 +226,7 @@ settax(newTax)
                         <div>
                           <div className="bpro52g">Starting From 2500</div>
                           <div className="bpro52b">
-                            Per night | Excluding Taxes & Fees
+                          Per night | Per Person | Excluding Taxes & Fees
                           </div>
                         </div>
                       </div>
@@ -248,7 +261,7 @@ settax(newTax)
                         <div>
                           <div className="bpro52g">Starting From 2500</div>
                           <div className="bpro52b">
-                            Per night | Excluding Taxes & Fees
+                          Per night | Per Person | Excluding Taxes & Fees
                           </div>
                         </div>
                       </div>
