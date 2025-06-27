@@ -68,8 +68,15 @@ const Bprocess = ({
     }
   };
   const firstroom = () => {
-    const datasin = second - first;
-    const newRoom = 5600 * datasin;
+    // console.log(second - first , "gfyghj");
+    
+    const datasin = pizza.roomR === 10  ? pizza.adult + pizza.child : count + count1;
+    const datejioij = pizza.roomR === 10 ? Number(pizza.datetwo.slice(8, 10)) - Number(pizza.dateone.slice(8, 10)) : (second - first)
+    const datainday = datasin * datejioij
+
+    // console.log(datejioij , "gfyghj");
+
+    const newRoom = 1799 * datainday;
     const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
@@ -138,9 +145,9 @@ settax(newTax)
                       </div>
                       <div className="uytghfyvj">
                         <div>
-                          <div className="bpro52g">Starting From 5600</div>
+                          <div className="bpro52g">Starting From 1799</div>
                           <div className="bpro52b">
-                            Per night | Excluding Taxes & Fees
+                            Per night | Per Person | Excluding Taxes & Fees
                           </div>
                         </div>
                       </div>
