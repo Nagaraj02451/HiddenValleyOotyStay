@@ -66,8 +66,11 @@ const RiversideBooking = ({
       }
     };
   const firstroom = () => {
-    const datasin = second - first;
-    const newRoom = 4800 * datasin;
+    const datasin = pizza.roomR === 10  ? pizza.adult + pizza.child : count + count1;
+    const datejioij = pizza.roomR === 10 ? Number(pizza.datetwo.slice(8, 10)) - Number(pizza.dateone.slice(8, 10)) : (second - first)
+    const datainday = datasin * datejioij
+
+    const newRoom = 1599 * datainday;
     const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
@@ -86,8 +89,11 @@ settax(newTax)
 
   };
   const secondroom = () => {
-    const datasin = second - first;
-    const newRoom = 4800 * datasin;
+    const datasin = pizza.roomR === 10  ? pizza.adult + pizza.child : count + count1;
+    const datejioij = pizza.roomR === 10 ? Number(pizza.datetwo.slice(8, 10)) - Number(pizza.dateone.slice(8, 10)) : (second - first)
+    const datainday = datasin * datejioij
+
+    const newRoom = 1599 * datainday;
     const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
@@ -105,8 +111,11 @@ settax(newTax)
 
   };
   const thirdroom = () => {
-    const datasin = second - first;
-    const newRoom = 3000 * datasin;
+    const datasin = pizza.roomR === 10  ? pizza.adult + pizza.child : count + count1;
+    const datejioij = pizza.roomR === 10 ? Number(pizza.datetwo.slice(8, 10)) - Number(pizza.dateone.slice(8, 10)) : (second - first)
+    const datainday = datasin * datejioij
+
+    const newRoom = 1599 * datainday;
     const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
@@ -125,8 +134,11 @@ settax(newTax)
   
   };
   const fouthroom = () => {
-    const datasin = second - first;
-    const newRoom = 3000 * datasin;
+    const datasin = pizza.roomR === 10  ? pizza.adult + pizza.child : count + count1;
+    const datejioij = pizza.roomR === 10 ? Number(pizza.datetwo.slice(8, 10)) - Number(pizza.dateone.slice(8, 10)) : (second - first)
+    const datainday = datasin * datejioij
+
+    const newRoom = 1599 * datainday;
     const newTax = newRoom * 12 / 100;
     const newTotal = newRoom + newTax;
     setlast(second - first);
@@ -193,9 +205,9 @@ settax(newTax)
                       </div>
                       <div className="uytghfyvj">
                         <div>
-                          <div className="bpro52g">Starting From 4800</div>
+                          <div className="bpro52g">Starting From 1599</div>
                           <div className="bpro52b">
-                            Per night | Excluding Taxes & Fees
+                          Per night | Per Person | Excluding Taxes & Fees
                           </div>
                         </div>
                       </div>
@@ -230,9 +242,9 @@ settax(newTax)
                       </div>
                       <div className="uytghfyvj">
                         <div>
-                          <div className="bpro52g">Starting From 4800</div>
+                          <div className="bpro52g">Starting From 1599</div>
                           <div className="bpro52b">
-                            Per night | Excluding Taxes & Fees
+                          Per night | Per Person | Excluding Taxes & Fees
                           </div>
                         </div>
                       </div>
@@ -267,9 +279,9 @@ settax(newTax)
                       </div>
                       <div className="uytghfyvj">
                         <div>
-                          <div className="bpro52g">Starting From 3000</div>
+                          <div className="bpro52g">Starting From 1599</div>
                           <div className="bpro52b">
-                            Per night | Excluding Taxes & Fees
+                          Per night | Per Person | Excluding Taxes & Fees
                           </div>
                         </div>
                       </div>
@@ -304,9 +316,9 @@ settax(newTax)
                       </div>
                       <div className="uytghfyvj">
                         <div>
-                          <div className="bpro52g">Starting From 3000</div>
+                          <div className="bpro52g">Starting From 1599</div>
                           <div className="bpro52b">
-                            Per night | Excluding Taxes & Fees
+                          Per night | Per Person | Excluding Taxes & Fees
                           </div>
                         </div>
                       </div>
