@@ -5,6 +5,7 @@ import Frontpage1 from './Components/Frontpage1';
 import Footer1 from './Components/Footer1';
 import "../src/App.css"
 import Ourstays from './Components/Ourstays';
+import Venam from './Components/Venam';
 import Navbar2 from './Components/Navbar2';
 import Contact from './Components/Contact';
 import Footer2 from './Components/Footer2';
@@ -24,6 +25,7 @@ import Privacy from './Components/Privacy';
 import Terms from './Components/Terms';
 import Refund from './Components/Refund';
 import Success from './Components/Success/Success';
+import VenamBooking from './Components/VenamBooking';
 // import Refund from './Components/Success/Success';
 // import { ToastContainer } from "react-toastify";
 
@@ -78,6 +80,8 @@ const Pages = () => {
 
        <Route path='/' element={<Frontpage1  addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} roomR={roomR} />}></Route>  
        <Route path='/hinyhouse' element={<Ourstays roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
+       <Route path='/Venam' element={<Venam roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
+     
        <Route path='/riverside' element={<Riverside roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
        <Route path='/sunsetcottage' element={<Sunstcottage roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
        <Route path='/sunsetvilla' element={<Sunsetvlla roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
@@ -86,6 +90,7 @@ const Pages = () => {
        <Route path='/property' element={<Property/>}></Route>
        <Route path='/booking' element={<Booking pizza={pizza} />}></Route>
        <Route path='/tinyhouseBooking' element={<Bprocess roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
+       <Route path='/venamBooking' element={<VenamBooking roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
        <Route path='/riversideBooking' element={<RiversideBooking roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
        <Route path='/sunsetcottageBooking' element={<SunsetcottageBooking  roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate} />}></Route>
        <Route path='/sunsetVillaBooking' element={<SubsetVillabooking roomR={roomR} taxR={taxR} totalR={totalR} stay={stay} addBase={addBase} pizza={pizza} adult ={addadult} child ={addchild}  dateone={firstdate} datetwo={seconddatedate}  />}></Route>
