@@ -25,6 +25,7 @@ const Frontpage1 = ({
     "RIVERSIDE",
     "NETHRA",
     "TINYHOUSE",
+    "VENAM"
   ];
   const [delivery, setdelivery] = useState("");
    
@@ -92,6 +93,8 @@ const Frontpage1 = ({
       navigate("/nethra");
     } else if (delivery === "TINYHOUSE") {
       navigate("/hinyhouse");
+    }else if (delivery === "VENAM") {
+      navigate("/Venam");
     }
     else{
       alert("Please fill the details.....")
