@@ -17,7 +17,9 @@ const Booking = ({pizza}) => {
       const location = useLocation();
       const[room , setroom] = useState("")
       const[tax , settax] = useState("")
-      const[total , settotal] = useState("")
+      const[total , settotal] = useState(Number)
+      console.log(typeof(total) , "gfgxcgh");
+      
       const[last , setlast] = useState("")
       const[per , setper] = useState("")
       const[email , setemail] = useState("")
@@ -38,22 +40,27 @@ const Booking = ({pizza}) => {
         script.onload = async () => {
           try {
             const result = await axios.post("/api/v1/create-order", {
-              amount: total + '00',
+              amount: Number(total) * 100,
+              
             });
+            
             const { amount, id: order_id, currency } = result.data;
+
+            // console.log(result , "kghc");
+
             const {
               data: { key: razorpayKey },
             } = await axios.get("/api/v1/get-razorpay-key");
             const options = {
               key: razorpayKey,
-              amount: amount.toString(),
+              amount: amount,
               currency: currency,
               name: 'HiddenValleyStays',
               description: 'HiddenValleyStays transaction',
               order_id: order_id,
               handler: async function (response) {
                 const result = await axios.post("/api/v1/pay-order", {
-                  amount: total,
+                  amount: Number(total.toString(0,2)),
                   razorpayPaymentId: response.razorpay_payment_id,
                   razorpayOrderId: response.razorpay_order_id,
                   razorpaySignature: response.razorpay_signature,
@@ -62,7 +69,7 @@ const Booking = ({pizza}) => {
                   phone : phone,
                   room:room,
                   tax:tax,
-                  total:total,
+                  total:Number(total),
                   date : pizza.dateone,
                   date2 :pizza.datetwo,
                   adult:pizza.adult,
